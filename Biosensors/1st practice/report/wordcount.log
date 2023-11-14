@@ -1,0 +1,23 @@
+File: report.tex
+Encoding: ascii
+Words in text: 2563
+Words in headers: 61
+Words outside text (captions, etc.): 246
+Number of headers: 17
+Number of floats/tables/figures: 6
+Number of math inlines: 17
+Number of math displayed: 5
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  110+5+0 (2/0/0/0) _top_
+  202+1+58 (1/1/0/0) Section: Introduction
+  0+3+0 (1/0/0/0) Section: Materials and methods
+  141+6+0 (1/0/0/0) Subsection: Experiment set up and electrode positioning
+  647+14+58 (4/2/14/5) Subsection: Signal processing and metrics
+  0+3+0 (1/0/0/0) Section: Results and discussions
+  561+17+75 (3/2/0/0) Subsection: Dependence of EMG recordings on experimental configuration
+  295+4+55 (1/1/3/0) Subsection: Processing of EMG recordings
+  252+6+0 (1/0/0/0) Subsection: Limitations of the EMG for prostheses
+  335+1+0 (1/0/0/0) Section: Conclusions
+  20+1+0 (1/0/0/0) Section: Compliance
+

@@ -1,0 +1,8 @@
+pandas
+numpy
+plotly
+nbformat
+notebook>=5.3 
+ipywidgets>=7.2
+kaleido
+scipy

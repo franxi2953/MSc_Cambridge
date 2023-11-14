@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: report.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: IEEEtran.bst
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: biosensors_class.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 8 entries,
+            4087 wiz_defined-function locations,
+            884 strings with 9677 characters,
+and the built_in function-call counts, 7400 in all, are:
+= -- 627
+> -- 185
+< -- 73
++ -- 102
+- -- 32
+* -- 383
+:= -- 1096
+add.period$ -- 16
+call.type$ -- 8
+change.case$ -- 8
+chr.to.int$ -- 150
+cite$ -- 8
+duplicate$ -- 522
+empty$ -- 508
+format.name$ -- 39
+if$ -- 1709
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 87
+newline$ -- 47
+num.names$ -- 8
+pop$ -- 162
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 565
+stack$ -- 0
+substring$ -- 376
+swap$ -- 490
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 8
+warning$ -- 0
+while$ -- 34
+width$ -- 9
+write$ -- 109
