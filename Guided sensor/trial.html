@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arduino Data Chart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.9.4/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="uk-container">
+
+    <div class="uk-grid">
+        <div class="uk-width-1-1 uk-margin-medium-bottom uk-margin-medium-top"> <!-- Adjusted margin for the chart row -->
+            <div class="uk-card uk-card-default uk-card-body">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+        <div class="uk-width-1-1"> <!-- Full width row for the button -->
+            <button class="uk-button uk-button-default" onclick="downloadData()">Download Data</button>
+        </div>
+    </div>
+
+
+    <script>
+        var chartData = [];
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'Sensor Data',
+                    backgroundColor: 'white',
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    data: [],
+                    showLine: true,
+                    pointRadius: 0 // Removes the points from the line
+                }]
+            },
+            options: {
+                animation: false, // Disables animation
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    },
+                    x: {
+                        type: 'linear',
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        function fetchData() {
+            fetch('http://192.168.223.244/retrieve')
+                .then(response => response.text())
+                .then(text => {
+                    var lines = text.trim().split('\n');
+                    chartData = lines.map(line => {
+                        var parts = line.split(',');
+                        return {
+                            x: parseFloat(parts[0]),
+                            y: parseInt(parts[1])
+                        };
+                    });
+                    chart.data.datasets[0].data = chartData;
+                    chart.update();
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function downloadData() {
+            var csvContent = "data:text/csv;charset=utf-8,";
+            csvContent += "Time,Value\n";
+            chartData.forEach(function(rowArray) {
+                var row = rowArray.x + "," + rowArray.y;
+                csvContent += row + "\r\n";
+            });
+
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "chart_data.csv");
+            document.body.appendChild(link); // Required for FF
+
+            link.click(); // This will download the data file named "chart_data.csv".
+        }
+
+        fetchData();
+        setInterval(fetchData, 500); // Fetch data every 3000 milliseconds
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.9.4/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.9.4/js/uikit-icons.min.js"></script>
+</body>
+</html>
