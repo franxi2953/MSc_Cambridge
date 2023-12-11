@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <WiFiS3.h>
-#include "WebPage.h"  // Make sure this file contains your HTML content as a string
+#include "WebPage.h"
 
 const char* ssid = "linksys";
 const char* password = "12345670";
@@ -32,24 +32,37 @@ void setup() {
 }
 
 void loop() {
-    // Rest of your existing code for collecting data...
+    // Record data if not ready to send
+    if (!dataReadyToSend) {
+        pulseData[currentIndex].value = analogRead(A4);
+        pulseData[currentIndex].time = millis() / 1000.0; // Convert to seconds
+        currentIndex++;
 
+        if (currentIndex >= 500) {
+            currentIndex = 0;
+            dataReadyToSend = true;
+            Serial.println("Data ready to send");
+        }
+    }
+
+    // Handle client requests
     WiFiClient client = server.available();
-    if (client && client.connected()) {
+    if (client && client.connected() && dataReadyToSend) {
+        Serial.println("Client connected!");
         String request = client.readStringUntil('\r');
         client.flush();
 
-        // Check if the request is for the root ("/") or for data ("/retrieve")
         if (request.indexOf("GET / ") >= 0) {
-            String htmlContent = webpage; // Copy the HTML content to a new string
-            htmlContent.replace("%%IP_ADDRESS%%", WiFi.localIP().toString()); // Replace the placeholder
+            // Serve the webpage
+            String htmlContent = webpage;
+            htmlContent.replace("%%IP_ADDRESS%%", WiFi.localIP().toString());
 
             client.println("HTTP/1.1 200 OK");
             client.println("Content-Type: text/html");
             client.println();
             client.print(htmlContent);
-        } else if (request.indexOf("GET /retrieve") >= 0) {
-            // Client requested data, serve the sensor data
+        } else if (request.indexOf("GET /retrieve") >= 0 && dataReadyToSend) {
+            // Serve the sensor data
             String dataString = "";
             for (int i = 0; i < 500; i++) {
                 dataString += String(pulseData[i].time, 2) + "," + String(pulseData[i].value) + "\n";
@@ -62,10 +75,12 @@ void loop() {
             client.println();
             client.print(dataString);
 
-            dataReadyToSend = false;
+            dataReadyToSend = false; // Reset the flag after sending data
             Serial.println("Data sent!");
         }
-
         client.stop();
     }
+
+    delay(10); // Small delay for stability
 }
+
