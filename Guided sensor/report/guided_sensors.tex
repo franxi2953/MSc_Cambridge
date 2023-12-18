@@ -33,14 +33,14 @@ Technology has become an essential part of our daily lives.
 At work, for leisures or health check-ups, we interact with complex devices that, 
 thanks to their user-friendly interfaces, do not require us to understand the 
 undearneath mechanisms. This often leads us to perceive tools as telephones or 
-computers as 'black boxes' that magically performs tasks - while they are 
+computers as `black boxes' that magically performs tasks - while they are 
 assemblies of simple technologies finely tuned together.
 
 Making hardware open-source is essential to demistify such a perception. In the 
 field of electronics, the open-source philosophy (defined by a design that is made 
 publicly available, allowing anyone to study, modify, distribute, make, and sell 
 it \cite{dosemagenGatheringOpenScience2017} - in striking contrapposition to the 
-"patent" way of operating) has been boosted and gained further recognizion with 
+`patent' way of operating) has been boosted and gained further recognizion with 
 widely spread projects such Arduino \cite{ArduinoHome} or Raspberry Pi 
 \cite{foundationTeachLearnMake2023}. Not only those projects have made the 
 learning curve less steep, but also cheapened the prototype phase of device building.
@@ -48,8 +48,8 @@ learning curve less steep, but also cheapened the prototype phase of device buil
 A natural extension of open-source hardware is the Do-It-Yourself (DIY) movement: 
 thanks to the shared knowledges and designs, individuals are empowered to build, 
 customize and repair electronic devices independently. Bulky and expensive machines 
-such as thermocyclers can be then "hacked" and readapted to fit in a pocket 
-\cite{PocketPCRGaudiShop} or engineered to be constructed by over-the-self 
+such as thermocyclers can be then `hacked' and readapted to fit in a pocket 
+\cite{PocketPCRGaudiShop}, or engineered to be constructed by over-the-self 
 electronics and 3D printing \cite{AirFlowMicroreactor}; 
 
 Sensors are a class of electronic devices which became daily use in the 
@@ -58,16 +58,16 @@ diagnosis (as the ones for Covid-19) are already of common use, in the next year
 we will benefit from "wereable" non-invasive sensors for continous monitoring of 
 health parameters \cite{smithReshapingHealthcareWearable2023}, or quick detection of 
 allergenes in our food \cite{sundhoroRapidAccurateElectrochemical2021}. Keeping 
-those technologies open-source will assure that they stay for individuals and by 
+those technologies open-source will assure that they stay \textit{for} individuals and \textit{by}
 individuals.
 
-Here, we provide two examples of open-source DIY sensors. First, we will improve 
+Here, we provide two examples of open-source DIY sensors. First, we improve 
 the accurancy of a commercial temperature sensor by customazing the current design 
-with analog amplification circuits; a calibration protocol will also be provided. 
-This will be a proof of example of how open-source technology allows for continuous 
-improvement and refining by the community. Secondly, we will construct from scratch 
-a individual-use pulse meter starting simply from the understanding of the mechanisms 
-needed, providing an example of DIY technology.
+with analog amplification circuits; a calibration protocol is also be provided. 
+This is a proof of concept of how open-source technology allows for continuous 
+improvement and refining by the community. Secondly, we construct from scratch 
+a pulse meter starting simply from the understanding of the mechanisms 
+needed, providing an example of completely DIY technology.
 
 
 % Open source hardware and DIY
@@ -87,7 +87,7 @@ needed, providing an example of DIY technology.
                DAC (otherwise, a significant potential would drop across the DAC resistor). This circuit is connected or disconnected
                through the mosfet D5.
 
-            \item The amplification circuit, composed of an operational amplifier working as a voltage amplifier, and two interchangeable
+            \item The amplification circuit is composed of an operational amplifier working as a voltage amplifier, and two interchangeable
                circuits to select gains of 2.2X or 22X. These circuits are activated with digital pins D2 and D3, and they change the resistances
                in the loop and in the positive rail. The latter facilitates the use of offset removal, which is subtracted in a 1:1 ratio
                (the applied offset is the same as subtracted from the sensor's value).
@@ -114,13 +114,13 @@ needed, providing an example of DIY technology.
          % \clearpage
 
       \subsubsection{Electronics production}
-      The circuit schematics were created in EasyEDA. The Arduino UNO Shield templates were imported from OpenSourceHardware Lab\cite{ArduinoShieldEasyEDA}.
+      The circuit schematics were created in EasyEDA. The Arduino UNO Shield templates were imported from OpenSourceHardware Lab \cite{ArduinoShieldEasyEDA}.
       Printed circuit boards (PCBs) with pre-routed traces were printed on transparent projection films and aligned on a single-side copper board covered by a positive photomask.
       The PCBs were exposed to UV light for 5 minutes, followed by a sodium hydroxide bath to remove excess mask. Subsequently, the copper plates were immersed in a copper etchant solution (Ferric Chloride)
       to remove the copper from the exposed regions. Finally, the mask was removed with acetone, and the plates were immersed in thiourea to coat the copper with a layer of tin.
       \subsubsection{Sensor probe}
       The sensor was soldered to solid core wires and made waterproof using a combination of heat-shrink plastic and heat-shrink tubing. Two layers were added
-      to ensure insulation, ensuring that the ceramic surface remained exposed to facilitate thermal exchange.
+      to ensure insulation, guaranteeing that the ceramic surface remained exposed to facilitate thermal exchange.
       \subsection{Sensor Calibration}
       To attempt to isolate the origin of any potential error, the operational amplifier was first calibrated (and its error studied), and then the output of the 
       operational amplifier was mapped against a digital reference temperature sensor (HH802WE, Omega).
