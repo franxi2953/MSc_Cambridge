@@ -75,7 +75,7 @@ needed, providing an example of completely DIY technology.
 \section{Temperature Sensor} % 1000 words
    \subsection{Introduction and goals}
    The primary objective of this section of the report is to enhance the 
-accuracy of a basic off-the-shelf temperature sensor, originally too 
+accuracy of a basic off-the-shelf temperature sensor (MCP9700, Microchip), originally too 
 inaccurate for healthcare applications (±2ºC). This improvement is sought 
 through the incorporation of an analog filtering and voltage amplification 
 circuit, in conjunction with a modular calibration process for various 
@@ -103,6 +103,14 @@ Finally, the system underwent testing in a real-world scenario featuring
 dynamic temperature changes. During this test, the responses of both sensors 
 were juxtaposed, and the errors, along with their potential sources, were 
 thoroughly analyzed.
+
+\begin{figure*}[!th]
+   % \afterpage{\clearpage}
+   \centering
+   \includegraphics[width=\textwidth]{images/electronic_diagram.png}
+   \caption{Annotated electronic diagram (a), etched PCB (b) and PCB after soldering and rework (c).}
+   \label{fig:circuit}
+\end{figure*}
 
    \subsection{Sensor design}
       \subsubsection{Electronic diagram}
@@ -133,14 +141,6 @@ thoroughly analyzed.
             \item The sensor connector, where the MCP9001 is plugged into the system.
          \end{enumerate}
 
-         \begin{figure*}[!th]
-            % \afterpage{\clearpage}
-            \centering
-            \includegraphics[width=\textwidth]{images/electronic_diagram.png}
-            \caption{Annotated electronic diagram (a), etched PCB (b) and PCB after soldering and rework (c).}
-            \label{fig:circuit}
-         \end{figure*}
-
          % \clearpage
 
       \subsubsection{Electronics production}
@@ -159,15 +159,15 @@ thoroughly analyzed.
       Initially, a sweep was performed with the calibration DAC from 0 to a saturation voltage (4.7V), first activating the gain 2 loop circuit and then the gain 22 circuit.
        After confirming that both circuits worked by comparing the obtained gains (and the amplification range) with the expected values, a "sequential offset subtraction" code 
        (using the Arduino's internal DAC) was implemented to subtract a discrete offset each time the operational amplifier was saturated (Appendix A; Figure \ref{fig:opamp}a). The results gradually show that as the 
-       removed offset increases, a minimum in the output voltage is reached, beyond which the signal cannot decrease(Appendix A; Figure \ref{fig:opamp}b). The potential explanation for this voltage lies in the internal
+       removed offset increases, a minimum in the output voltage is reached, beyond which the signal cannot decrease (Appendix A; Figure \ref{fig:opamp}b). The potential explanation for this voltage lies in the internal
         diode of the operational amplifier closed-loop MOSFETs. Even when the MOSFET is open, not conducting voltage through the loop from the output of the operational amplifier 
         to the inverting input, the internal diode of the MOSFET allows circulation from the inverted input of the op-amp to the op-amp's output, contaminating this output with the DAC voltage. 
         When the offset voltage is small, most of it falls on the diode, but as the output grows, it becomes more and more contaminated. Some specialized forums suggest using "back-to-back" MOSFETs\cite{BackBackMOSFET} 
         as a potential solution, but after a quick attempt, the result remained the same. Therefore, due to time constraints, it was decided to desolder the 2X loop and continue the experiment only with a 
         gain of 22, whose results, along with the offset subtraction script, showed an effective input range from 0 to 4.7 volts with an output (including the subtracted offset from the sensor voltage) 
-        of approximately 0-104V(Figure \ref{fig:finalop}).
+        of approximately 0-104V (Figure \ref{fig:finalop}).
 
-        \begin{figure}[h]
+        \begin{figure}[!th]
          \centering
          \includegraphics[width=1\linewidth]{images/finalop.png}
          \caption{Final plot of DAC voltage vs. the output operational amplifier voltage after adding the offset.}
@@ -178,9 +178,9 @@ thoroughly analyzed.
 
       For temperature calibration, a previously published open-source isothermal fluorimeter was modified \cite{Open_qLAMPMasterOpen2023}.
       The heated lid was separated from the housing and folded around the two sensors, creating the equivalent of a 'spring roll' with the two sensors 
-      in the center and the lid spiraling around them (Figure \ref{fig:temp}a). The lid was then heated at different intensities, after which it was allowed to reach thermal 
+      in the center and the lid spiraling around them (Figure \ref{fig:temp}a). The lid was then heated at different temperatures, after which it was allowed to reach thermal 
       equilibrium for 3-4 minutes, and the voltage value at the output of the operational amplifier and the temperature of the reference sensor were recorded. 
-      A linear regression was then established, and the error was studied reaching a value of ~±1°C (Figure \ref{fig:temp}b).
+      A linear regression was then established, and confidence intervals were calculated, resulting in a maximun error ~±1°C (Figure \ref{fig:temp}b).
       
       \begin{figure}[h]
          \centering
@@ -207,19 +207,44 @@ thoroughly analyzed.
       \begin{enumerate}
       \item Both methods demonstrated a correlation with an R-squared value close to 1, a slope of 1, and an intercept almost equal to 0, indicating a strong correlation between them.
       \item The residual distribution, as shown in the Bland-Altman plot, reveals a maximum difference between values of approximately ±1°C (accuracy of ~±1°C). Additionally, within the physiological range (32ºC-40ºC), the maximum error is about ±0.4ºC. This error seems to negatively correlate (decreasing with temperature) up to 40ºC, suggesting the potential for applying an additional linear correction within this range to further enhance accuracy.
-      \item Considering the negligible error from the operational amplifier during calibration and the fact that the final error closely matches the sensor calibration against the reference method, it is evident that the replicability of the temperature sensor's results is the primary factor limiting accuracy improvement. Notably, the error during the calibration phase was broader than that in the testing phase, possibly indicating better temperature uniformity in water (testing phase) compared to air (calibration phase).
+      \item Considering the negligible error from the operational amplifier during calibration and the fact that the final error closely matches the sensor calibration against the reference method, it is evident that the replicability of the MCP9700 readings is the primary factor limiting accuracy improvement. 
+      Interestingly, the error in the final dynamic system is less than that in the calibration experiment. This may be due to less thermal uniformity in the calibration experiment, 
+      where the reference sensor was coiled around the sensor being calibrated, touching the metallic walls of the heater (and thus subject to direct temperature changes) while the 
+      sensor being calibrated, surrounded by a much thicker ceramic layer, took longer to absorb and release immediate changes from the heater.
       \item The results from the adaptive offset circuit are satisfactory, allowing for potentially higher amplification gains than 22 without limiting the range. However, given the accuracy results of the sensor and the source of variability, increased amplification does not appear to be the limiting factor.
-      \item Finally, these results indicate an improvement from the 2ºC accuracy specified in the component's datasheet to 0.4ºC in the physiological range, representing a fivefold improvement.
+      \item Finally, these results indicate an improvement from the ±2ºC accuracy specified in the component's datasheet to ±0.4ºC in the physiological range, representing a fivefold improvement. 
+      
       \end{enumerate}
 
 \section{Pulse meter} % 1000 words
    \subsection{Introduction and goals}
    \subsection{Sensor design}
-      \subsubsection{Electronic diagram}
+      \subsubsection{Electronic diagram and production}
+      The electronic design was constructed following the provided pattern of a circuit with a transimpedance amplifier followed by a voltage amplifier.
+      Only the following modifications were included:
+      - A MOSFET U2, to bypass resistor R3 and facilitate the rapid charging of capacitor C2. The goal is to temporarily activate this fast charging to allow the circuit to adapt
+      more quickly to changes in DC offset.
+      - The LEDs and photodiodes were externalized on a separate PCB to allow for better positioning. Through-hole components were replaced with SMD components (as they provide better skin contact),
+      and two photodiodes were placed in series to improve the signal.
+
+Unfortunately, the photolithography system was not available during the week when the PCBs needed to be produced, so all PCBs were hand-drawn with a permanent marker on double-sided copper plates.
+Subsequently, the copper plates were immersed in a copper etchant solution (Ferric Chloride) to remove the copper from the exposed regions. Finally, the mask was removed with acetone, and the plates were immersed in thiourea to coat the copper with a layer of tin.
+
+      \begin{figure*}[!th]
+         % \afterpage{\clearpage}
+         \centering
+         \includegraphics[width=\textwidth]{images/ed2.png}
+         \caption{Annotated electronic diagram (a), etched PCB (b) and PCB after soldering and rework (c).}
+         \label{fig:circuit}
+      \end{figure*}
       \subsubsection{Sensing probes}
       \subsubsection{Case}
+      \subsubsection{Signal analysis}
       \subsubsection{User Interface}
       \subsubsection{Results and conclusion}
+      % Mechanical noise is the bigger problem
+      % Bluetooth rather than wifi
+      % amplification on the sensing board. long wires catch bigger EM noise
 \section{General Conclusion} % 500 words
 
 

@@ -147,8 +147,10 @@ INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmrc8t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
 INPUT .\images\electronic_diagram.png
 INPUT .\images\electronic_diagram.png
 INPUT .\images\electronic_diagram.png
@@ -157,6 +159,8 @@ OUTPUT guided_sensors.pdf
 INPUT .\images\electronic_diagram.png
 INPUT .\images\electronic_diagram.png
 INPUT .\images\electronic_diagram.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\franx\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
@@ -169,6 +173,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT .\images\finalop.png
 INPUT .\images\finalop.png
@@ -177,10 +182,6 @@ INPUT .\images\finalop.png
 INPUT .\images\finalop.png
 INPUT .\images\finalop.png
 INPUT .\images\finalop.png
-INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
 INPUT .\images\temp calibration.png
 INPUT .\images\temp calibration.png
 INPUT .\images\temp calibration.png
@@ -195,7 +196,13 @@ INPUT .\images\final results.png
 INPUT .\images\final results.png
 INPUT .\images\final results.png
 INPUT .\images\final results.png
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
+INPUT .\images\ed2.png
+INPUT .\images\ed2.png
+INPUT .\images\ed2.png
+INPUT .\images\ed2.png
+INPUT .\images\ed2.png
+INPUT .\images\ed2.png
+INPUT .\images\ed2.png
 INPUT .\guided_sensors.bbl
 INPUT .\guided_sensors.bbl
 INPUT guided_sensors.bbl

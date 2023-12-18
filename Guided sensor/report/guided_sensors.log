@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.29)  18 DEC 2023 12:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.29)  18 DEC 2023 13:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -245,7 +245,11 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count284
 \l__pdf_internal_box=\box59
-) (guided_sensors.aux)
+) (guided_sensors.aux
+
+LaTeX Warning: Label `fig:circuit' multiply defined.
+
+)
 \openout1 = `guided_sensors.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -283,16 +287,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 79.
+ (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 <images/electronic_diagram.png, id=1, 727.2771pt x 727.2771pt>
 File: images/electronic_diagram.png Graphic file (type png)
 <use images/electronic_diagram.png>
-Package pdftex.def Info: images/electronic_diagram.png  used on input line 109.
+Package pdftex.def Info: images/electronic_diagram.png  used on input line 110.
 (pdftex.def)             Requested size: 516.0pt x 516.01524pt.
-
-Underfull \vbox (badness 1087) has occurred while \output is active []
-
  [1{C:/Users/franx/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
@@ -306,27 +311,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/finalop.png, id=16, 722.7pt x 393.3897pt>
 File: images/finalop.png Graphic file (type png)
 <use images/finalop.png>
-Package pdftex.def Info: images/finalop.png  used on input line 142.
+Package pdftex.def Info: images/finalop.png  used on input line 172.
 (pdftex.def)             Requested size: 252.0pt x 137.17223pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 153.
- (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
 <images/temp calibration.png, id=17, 722.7pt x 722.7pt>
 File: images/temp calibration.png Graphic file (type png)
 <use images/temp calibration.png>
-Package pdftex.def Info: images/temp calibration.png  used on input line 157.
+Package pdftex.def Info: images/temp calibration.png  used on input line 187.
 (pdftex.def)             Requested size: 252.0pt x 252.00041pt.
-<images/final results.png, id=18, 722.7pt x 909.3975pt>
-File: images/final results.png Graphic file (type png)
-<use images/final results.png>
-Package pdftex.def Info: images/final results.png  used on input line 170.
-(pdftex.def)             Requested size: 252.0pt x 317.10054pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3 <./images/finalop.png> <./images/temp calibration.png>] (guided_sensors.bbl
+<images/final results.png, id=18, 722.7pt x 909.3975pt>
+File: images/final results.png Graphic file (type png)
+<use images/final results.png>
+Package pdftex.def Info: images/final results.png  used on input line 200.
+(pdftex.def)             Requested size: 252.0pt x 317.10054pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./images/finalop.png>]
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [4 <./images/temp calibration.png> <./images/final results.png>]
+<images/ed2.png, id=28, 722.7pt x 515.526pt>
+File: images/ed2.png Graphic file (type png)
+<use images/ed2.png>
+Package pdftex.def Info: images/ed2.png  used on input line 236.
+(pdftex.def)             Requested size: 516.0pt x 368.07913pt.
+ (guided_sensors.bbl
 Underfull \hbox (badness 3849) in paragraph at lines 39--41
 []\T1/ptm/m/n/8 ``AirFlow mi-crore-ac-tor,'' https://www.hackster.io/jim-haseloff/airflow-
  []
@@ -365,10 +378,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--66
 runsystem(wordcount.bat guided_sensors.tex)...executed.
 
  (guided_sensors.wc)
-<images/op amp calibration.png, id=24, 722.7pt x 754.7397pt>
+<images/op amp calibration.png, id=29, 722.7pt x 754.7397pt>
 File: images/op amp calibration.png Graphic file (type png)
 <use images/op amp calibration.png>
-Package pdftex.def Info: images/op amp calibration.png  used on input line 205.
+Package pdftex.def Info: images/op amp calibration.png  used on input line 262.
 (pdftex.def)             Requested size: 516.0pt x 538.87471pt.
 
 
@@ -385,24 +398,30 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4 <./images/final results.png>] [5 <./images/op amp calibration.png>] (guided_sensors.aux)
+[5
+
+] [6 <./images/ed2.png>] [7 <./images/op amp calibration.png>] (guided_sensors.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 3924 strings out of 474717
- 62113 string characters out of 5758250
+ 3932 strings out of 474717
+ 62278 string characters out of 5758250
  1940036 words of memory out of 5000000
- 25943 multiletter control sequences out of 15000+600000
+ 25951 multiletter control sequences out of 15000+600000
  660142 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,499b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,65p,573b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on guided_sensors.pdf (5 pages, 7262134 bytes).
+Output written on guided_sensors.pdf (7 pages, 9141575 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
