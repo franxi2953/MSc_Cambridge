@@ -123,7 +123,7 @@ thoroughly analyzed.
                filter of the DAC should be as low as possible (100 Ohms finally) so that the relationship between its resistance and the
                rest of the rail (especially resistors $R_4 + {R_3} / {R_2}$) is low enough to obtain most of Vin at the output of the
                DAC (otherwise, a significant potential would drop across the DAC resistor). This circuit is connected or disconnected
-               through the mosfet D5.
+               through the mosfet D5 (AO3400).
 
             \item The amplification circuit is composed of an operational amplifier (MCP9700, Microchip Technologies), working as a voltage amplifier in a range from 0 to 4.7V, and two MOSFET-based
                gain selection circuits, selecting gains of 2.2X or 22X. These circuits are activated with digital pins D2 and D3, and they change the close loop resistances
@@ -225,7 +225,7 @@ same PCB.
       \subsubsection{Electronic diagram and production}
       The electronic design was constructed following the provided pattern of a circuit with a transimpedance amplifier followed by a voltage amplifier.
       Only the following modifications were included:
-         - A MOSFET U2, to bypass resistor R3 and facilitate the rapid charging of capacitor C2. The goal is to temporarily activate this fast charging to allow the circuit to adapt
+         - The MOSFET U2 (AO3400), to bypass resistor R3 and facilitate the rapid charging of capacitor C2. The goal is to temporarily activate this fast charging to allow the circuit to adapt
          more quickly to changes in DC offset.
          - The LEDs and photodiodes were externalized on a separate PCB to allow for better positioning. Through-hole components were replaced with SMD components (as they provide better skin contact),
          and two photodiodes were placed in series to improve the signal.
