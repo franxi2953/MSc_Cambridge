@@ -74,6 +74,36 @@ needed, providing an example of completely DIY technology.
 % Sensors are not a black box
 \section{Temperature Sensor} % 1000 words
    \subsection{Introduction and goals}
+   The primary objective of this section of the report is to enhance the 
+accuracy of a basic off-the-shelf temperature sensor, originally too 
+inaccurate for healthcare applications (±2ºC). This improvement is sought 
+through the incorporation of an analog filtering and voltage amplification 
+circuit, in conjunction with a modular calibration process for various 
+circuit components. Initially, a design was conceptualized, constructed, 
+and subjected to iterative testing. This testing phase involved assessing 
+the impact of different component values on the circuit's performance, 
+with an oscilloscope utilized for analysis.
+
+Subsequently, the circuit's response to various voltage levels, which could 
+potentially originate from a sensor connected to it, was simulated. A DAC, 
+based on a low-pass filter, was engineered to transform the PWM output of 
+the Arduino into a continuous voltage. This PWM-to-Analog voltage circuit 
+design was imperative, particularly because the Arduino's internal DAC, 
+known for its improved 1mV precision, was earmarked for subsequent offset 
+subtraction.
+
+After calibrating the operational amplifier's response to the simulated 
+voltages, we developed a function to correlate the amplifier's output 
+voltage with actual temperature readings. To accomplish this, the final 
+temperature sensor was connected to the circuit. A linear regression was 
+then established between the sensor's amplified voltage output and the 
+temperature readings from an external digital temperature sensor, which had 
+been previously validated during the calibration of isothermal fluorimeters. 
+Finally, the system underwent testing in a real-world scenario featuring 
+dynamic temperature changes. During this test, the responses of both sensors 
+were juxtaposed, and the errors, along with their potential sources, were 
+thoroughly analyzed.
+
    \subsection{Sensor design}
       \subsubsection{Electronic diagram}
          The complete circuit diagram is shown in Figure \ref{fig:circuit}. Overall, the designed circuit was divided into 4 parts:
@@ -165,20 +195,22 @@ needed, providing an example of completely DIY technology.
    Finally, the sensor was tested against the reference method to measure a dynamic system, the cooling of freshly boiled water from 95°C to 25°C. Both sensors were coiled together and secured with thermally conductive tape. 
    They were submerged in the water, and the temperature was continuously recorded and plotted with a linear correlation analysis (Figure \ref{fig:final}).
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{images/final results.png}
-    \caption{}
-    \label{fig:final}
-\end{figure}
-
-In these results, the following observations can be made:
-\begin{enumerate}
-    \item Both methods have a correlation with a slope of 1 and an intercept almost equal to 0, indicating high accuracy.
-    \item Considering the error, the maximum difference between values is approximately ±1°C (Accuracy of ~±1°C).
-    \item Taking into account that the error of the operational amplifier during the calibration step was nearly negligible, and the final error is nearly the same as the one obtained in the sensor calibration against a reference method, we can conclude that the bottleneck for improving accuracy is the replicability of the temperature sensor's results itself.
-    \item The results of the adaptive offset circuit are satisfactory, potentially allowing for higher amplification without limiting the range. However, considering the accuracy results of the sensor (the variability obtained around the same temperature), it does not seem that increased amplification would solve the problem.
-\end{enumerate}
+   \begin{figure}[h]
+      \centering
+      \includegraphics[width=\linewidth]{images/final results.png}
+      \caption{Calibration results and linear regression (a), and Bland-Altman plot of residual distribution (b).}
+      \label{fig:final}
+      \end{figure}
+      
+      From these results, several observations can be made:
+      
+      \begin{enumerate}
+      \item Both methods demonstrated a correlation with an R-squared value close to 1, a slope of 1, and an intercept almost equal to 0, indicating a strong correlation between them.
+      \item The residual distribution, as shown in the Bland-Altman plot, reveals a maximum difference between values of approximately ±1°C (accuracy of ~±1°C). Additionally, within the physiological range (32ºC-40ºC), the maximum error is about ±0.4ºC. This error seems to negatively correlate (decreasing with temperature) up to 40ºC, suggesting the potential for applying an additional linear correction within this range to further enhance accuracy.
+      \item Considering the negligible error from the operational amplifier during calibration and the fact that the final error closely matches the sensor calibration against the reference method, it is evident that the replicability of the temperature sensor's results is the primary factor limiting accuracy improvement. Notably, the error during the calibration phase was broader than that in the testing phase, possibly indicating better temperature uniformity in water (testing phase) compared to air (calibration phase).
+      \item The results from the adaptive offset circuit are satisfactory, allowing for potentially higher amplification gains than 22 without limiting the range. However, given the accuracy results of the sensor and the source of variability, increased amplification does not appear to be the limiting factor.
+      \item Finally, these results indicate an improvement from the 2ºC accuracy specified in the component's datasheet to 0.4ºC in the physiological range, representing a fivefold improvement.
+      \end{enumerate}
 
 \section{Pulse meter} % 1000 words
    \subsection{Introduction and goals}
