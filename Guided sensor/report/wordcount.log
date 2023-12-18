@@ -1,0 +1,24 @@
+File: guided_sensors.tex
+Encoding: utf8
+Words in text: 1451
+Words in headers: 48
+Words outside text (captions, etc.): 76
+Number of headers: 22
+Number of floats/tables/figures: 5
+Number of math inlines: 1
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  0+3+0 (1/0/0/0) _top_
+  361+2+0 (1/0/0/0) Section: General Introduction
+  0+2+0 (1/0/0/0) Section: Temperature Sensor
+  0+3+0 (1/0/0/0) Subsection: Introduction and goals
+  474+8+14 (4/1/1/0) Subsection: Sensor design
+  415+7+22 (3/2/0/0) Subsection: Sensor Calibration
+  201+3+0 (1/1/0/0) Subsection: Results and discussion
+  0+2+0 (1/0/0/0) Section: Pulse meter
+  0+3+0 (1/0/0/0) Subsection: Introduction and goals
+  0+12+0 (6/0/0/0) Subsection: Sensor design
+  0+2+0 (1/0/0/0) Section: General Conclusion
+  0+1+40 (1/1/0/0) Section: Compliance
+

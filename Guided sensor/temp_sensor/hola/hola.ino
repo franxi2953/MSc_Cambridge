@@ -1,54 +1,83 @@
-import serial
-import matplotlib.pyplot as plt
-import time
+// Define the pin numbers
+const int pwmPin = 6; // Assuming D6
+const int gain22Pin = 3; // Specify the pin number
+const int gain220Pin = 2; // Specify the pin number
+const int offsetVoltagePin = A0; // Specify the pin number for offset voltage
 
-# Set up serial communication
-ser = serial.Serial('COM8', 115200, timeout=1)
-time.sleep(2)  # Wait for the serial connection to initialize
+// Constants for the temperature calculation
+const float slope = 3.1223; // Update with your actual slope value
+const float intercept = -35.24; // Update with your actual intercept value
+const float offsetMultiplier = 22.08; // Constant to multiply with offset
 
-# Lists to store the data
-amplified_voltages = []
-offsets = []
+int adjust_offset = 0;
 
-# Enable interactive mode in matplotlib
-plt.ion()
-fig, ax = plt.subplots()
-line, = ax.plot(offsets, amplified_voltages, 'r-')  # Red line plot
-plt.xlabel('Offset')
-plt.ylabel('Amplified Voltage')
-plt.title('Real-time Plot of Amplified Voltage vs Offset')
+void setup() {
+  pinMode(pwmPin, OUTPUT); // Set D6 as an output pin
+  pinMode(gain22Pin, OUTPUT); // Gain 22k
+  pinMode(gain220Pin, OUTPUT); // Gain 220k
 
-try:
-    while True:
-        ser.write(b'$')
-        line = ser.readline().decode('utf-8').strip()
-        parts = line.split(',')
-        if len(parts) >= 3:
-            try:
-                amplified_voltage = float(parts[0].split(':')[1])
-                offset = float(parts[2].split(':')[1])
+  analogWriteResolution(12);
+  analogReadResolution(14);
 
-                # Append data to the lists
-                amplified_voltages.append(amplified_voltage)
-                offsets.append(offset)
+  adjustGain(22); // Function definition needed for adjustGain
+  analogWrite(offsetVoltagePin, 0);
 
-                # Update the plot
-                line.set_xdata(offsets)
-                line.set_ydata(amplified_voltages)
-                ax.relim()  # Recalculate limits
-                ax.autoscale_view(True, True, True)  # Rescale the plot
-                fig.canvas.draw()
-                fig.canvas.flush_events()
+  Serial.begin(115200); // Start serial communication at 115200 baud
+}
 
-            except ValueError:
-                print(f"Error parsing line: {line}")
+void loop() {
+  if (Serial.available() > 0) {
+    int degrees = Serial.parseInt(); // Read number from serial
+    startMeasuring(degrees);
+  }
+}
 
-        time.sleep(1)  # Short delay
+void startMeasuring(int degrees) {
+  adjust_offset = 0;
+  analogWrite(A0, (4.7 / offsetMultiplier) * adjust_offset * (4096 / 4.7));
+  delay(50);
 
-except KeyboardInterrupt:
-    print("Program interrupted by the user")a
+  while (true) {
+    float outputValue = float(analogRead(A1)) * 4.7/16383; // Read the value from A1
+    if (outputValue > 4.65) { // Assuming 4.65 is the saturation level
+      adjust_offset++;
+      analogWrite(A0, (4.7 / offsetMultiplier) * adjust_offset * (4096 / 4.7));
+      delay(50);
+    } else {
+      break;
+    }
+  }
 
-finally:
-    ser.close()
-    plt.ioff()  # Disable interactive mode
-    plt.show()  # Show the final plot
+  float nonAmplifiedVoltage = float(analogRead(A2)) * 4.7/16383.0; // Read the value from A2
+  float amplifiedVoltage = float(analogRead(A1)) * 4.7/16383.0; // Read the value from A1 again
+  float offsetVoltage = (4.7 / offsetMultiplier) * adjust_offset;
+  float calculatedTemp = calculateTemperature(amplifiedVoltage, offsetVoltage);
+
+  // Print the values to the Serial
+  Serial.print("received_temperature:");
+  Serial.print(degrees);
+  Serial.print(",output_temp:");
+  Serial.println(calculatedTemp);
+
+  flush_serial();
+}
+
+float calculateTemperature(float amplifiedVoltage, float offsetVoltage) {
+  return slope * (amplifiedVoltage + (offsetVoltage*22.08)) + intercept;
+}
+
+void adjustGain(float gain){
+  if (gain < 3) {
+    digitalWrite(gain220Pin, LOW);
+    digitalWrite(gain22Pin, HIGH);
+  } else {
+    digitalWrite(gain220Pin, HIGH);
+    digitalWrite(gain22Pin, LOW);
+  }
+}
+
+void flush_serial() {
+  while (Serial.available() > 0) {
+    Serial.read(); // Read and discard the incoming byte
+  }
+}

@@ -1,0 +1,234 @@
+PWD c:\Users\franx\Documents\Github\MSc_Cambridge\Guided sensor\report
+INPUT C:\Users\franx\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\franx\Documents\Github\MSc_Cambridge\Guided sensor\report\guided_sensors.tex
+OUTPUT guided_sensors.log
+INPUT C:\Program Files\MiKTeX\tex\latex\ieeetran\IEEEtran.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\ieeetran\IEEEtran.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi7t.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\t1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\t1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\t1ptm.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\afterpage.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\afterpage.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\guided_sensors.aux
+INPUT .\guided_sensors.aux
+INPUT guided_sensors.aux
+OUTPUT guided_sensors.aux
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmbi8t.tfm
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmrc8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT .\images\electronic_diagram.png
+INPUT .\images\electronic_diagram.png
+INPUT .\images\electronic_diagram.png
+INPUT .\images\electronic_diagram.png
+OUTPUT guided_sensors.pdf
+INPUT .\images\electronic_diagram.png
+INPUT .\images\electronic_diagram.png
+INPUT .\images\electronic_diagram.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Users\franx\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\base\8r.enc
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmrc8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT .\images\finalop.png
+INPUT .\images\finalop.png
+INPUT .\images\finalop.png
+INPUT .\images\finalop.png
+INPUT .\images\finalop.png
+INPUT .\images\finalop.png
+INPUT .\images\finalop.png
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\psnfss\ts1ptm.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8c.tfm
+INPUT .\images\temp calibration.png
+INPUT .\images\temp calibration.png
+INPUT .\images\temp calibration.png
+INPUT .\images\temp calibration.png
+INPUT .\images\temp calibration.png
+INPUT .\images\temp calibration.png
+INPUT .\images\temp calibration.png
+INPUT .\images\final results.png
+INPUT .\images\final results.png
+INPUT .\images\final results.png
+INPUT .\images\final results.png
+INPUT .\images\final results.png
+INPUT .\images\final results.png
+INPUT .\images\final results.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
+INPUT .\guided_sensors.bbl
+INPUT .\guided_sensors.bbl
+INPUT guided_sensors.bbl
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT .\guided_sensors.wc
+INPUT .\guided_sensors.wc
+INPUT guided_sensors.wc
+INPUT .\images\op amp calibration.png
+INPUT .\images\op amp calibration.png
+INPUT .\images\op amp calibration.png
+INPUT .\images\op amp calibration.png
+INPUT .\images\op amp calibration.png
+INPUT .\images\op amp calibration.png
+INPUT .\images\op amp calibration.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT guided_sensors.aux
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmri8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmri8a.pfb
