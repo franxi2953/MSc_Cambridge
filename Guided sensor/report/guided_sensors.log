@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.29)  18 DEC 2023 13:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.29)  18 DEC 2023 15:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -311,12 +311,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/finalop.png, id=16, 722.7pt x 393.3897pt>
 File: images/finalop.png Graphic file (type png)
 <use images/finalop.png>
-Package pdftex.def Info: images/finalop.png  used on input line 172.
+Package pdftex.def Info: images/finalop.png  used on input line 171.
 (pdftex.def)             Requested size: 252.0pt x 137.17223pt.
 <images/temp calibration.png, id=17, 722.7pt x 722.7pt>
 File: images/temp calibration.png Graphic file (type png)
 <use images/temp calibration.png>
-Package pdftex.def Info: images/temp calibration.png  used on input line 187.
+Package pdftex.def Info: images/temp calibration.png  used on input line 186.
 (pdftex.def)             Requested size: 252.0pt x 252.00041pt.
 
 
@@ -325,7 +325,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/final results.png, id=18, 722.7pt x 909.3975pt>
 File: images/final results.png Graphic file (type png)
 <use images/final results.png>
-Package pdftex.def Info: images/final results.png  used on input line 200.
+Package pdftex.def Info: images/final results.png  used on input line 199.
 (pdftex.def)             Requested size: 252.0pt x 317.10054pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -337,7 +337,7 @@ Underfull \vbox (badness 1331) has occurred while \output is active []
 <images/ed2.png, id=28, 722.7pt x 515.526pt>
 File: images/ed2.png Graphic file (type png)
 <use images/ed2.png>
-Package pdftex.def Info: images/ed2.png  used on input line 236.
+Package pdftex.def Info: images/ed2.png  used on input line 239.
 (pdftex.def)             Requested size: 516.0pt x 368.07913pt.
  (guided_sensors.bbl
 Underfull \hbox (badness 3849) in paragraph at lines 39--41
@@ -381,7 +381,7 @@ runsystem(wordcount.bat guided_sensors.tex)...executed.
 <images/op amp calibration.png, id=29, 722.7pt x 754.7397pt>
 File: images/op amp calibration.png Graphic file (type png)
 <use images/op amp calibration.png>
-Package pdftex.def Info: images/op amp calibration.png  used on input line 262.
+Package pdftex.def Info: images/op amp calibration.png  used on input line 295.
 (pdftex.def)             Requested size: 516.0pt x 538.87471pt.
 
 
@@ -398,9 +398,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
-
-] [6 <./images/ed2.png>] [7 <./images/op amp calibration.png>] (guided_sensors.aux)
+[5] [6 <./images/ed2.png>] [7 <./images/op amp calibration.png>] (guided_sensors.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
@@ -413,13 +411,13 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3932 strings out of 474717
  62278 string characters out of 5758250
- 1940036 words of memory out of 5000000
+ 1942036 words of memory out of 5000000
  25951 multiletter control sequences out of 15000+600000
  660142 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,8n,65p,573b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on guided_sensors.pdf (7 pages, 9141575 bytes).
+Output written on guided_sensors.pdf (7 pages, 8949576 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

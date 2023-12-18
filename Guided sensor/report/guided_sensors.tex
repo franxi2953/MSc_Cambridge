@@ -75,7 +75,7 @@ needed, providing an example of completely DIY technology.
 \section{Temperature Sensor} % 1000 words
    \subsection{Introduction and goals}
    The primary objective of this section of the report is to enhance the 
-accuracy of a basic off-the-shelf temperature sensor (MCP9700, Microchip), originally too 
+accuracy of a basic off-the-shelf temperature sensor (MCP9700, Microchip Technologies), originally too 
 inaccurate for healthcare applications (±2ºC). This improvement is sought 
 through the incorporation of an analog filtering and voltage amplification 
 circuit, in conjunction with a modular calibration process for various 
@@ -125,10 +125,9 @@ thoroughly analyzed.
                DAC (otherwise, a significant potential would drop across the DAC resistor). This circuit is connected or disconnected
                through the mosfet D5.
 
-            \item The amplification circuit is composed of an operational amplifier working as a voltage amplifier, and two interchangeable
-               circuits to select gains of 2.2X or 22X. These circuits are activated with digital pins D2 and D3, and they change the resistances
-               in the loop and in the positive rail. The latter facilitates the use of offset removal, which is subtracted in a 1:1 ratio
-               (the applied offset is the same as subtracted from the sensor's value).
+            \item The amplification circuit is composed of an operational amplifier (MCP9700, Microchip Technologies), working as a voltage amplifier in a range from 0 to 4.7V, and two MOSFET-based
+               gain selection circuits, selecting gains of 2.2X or 22X. These circuits are activated with digital pins D2 and D3, and they change the close loop resistances
+               and and another two mirroring ones on the non-inverting input that allows a 1:1 ratio in the offset removal.
 
             \item The offset removal, controlled through the Arduino's internal DAC on pin A0 with a precision of 12 bits and a range of 0-4.7V
                (when the Arduino is connected via USB), providing a theoretical step of 1mV. The offset is applied to the inverting input and undergoes
@@ -138,7 +137,7 @@ thoroughly analyzed.
                Amplifier, which are responsible for filtering high frequencies from the microcontroller crystals, both in the voltage rail and at
                the output of the operational amplifier.
 
-            \item The sensor connector, where the MCP9001 is plugged into the system.
+            \item The sensor connector, where the sensor is plugged into the system.
          \end{enumerate}
 
          % \clearpage
@@ -170,7 +169,7 @@ thoroughly analyzed.
         \begin{figure}[!th]
          \centering
          \includegraphics[width=1\linewidth]{images/finalop.png}
-         \caption{Final plot of DAC voltage vs. the output operational amplifier voltage after adding the offset.}
+         \caption{Output response operational amplifier voltage after adding the offset.}
          \label{fig:finalop}
       \end{figure}
 
@@ -205,7 +204,7 @@ thoroughly analyzed.
       From these results, several observations can be made:
       
       \begin{enumerate}
-      \item Both methods demonstrated a correlation with an R-squared value close to 1, a slope of 1, and an intercept almost equal to 0, indicating a strong correlation between them.
+      \item Both methods demonstrated an strong 1:1 correlation with an R-squared value close to 1, a slope of 1, and an intercept almost equal to 0.
       \item The residual distribution, as shown in the Bland-Altman plot, reveals a maximum difference between values of approximately ±1°C (accuracy of ~±1°C). Additionally, within the physiological range (32ºC-40ºC), the maximum error is about ±0.4ºC. This error seems to negatively correlate (decreasing with temperature) up to 40ºC, suggesting the potential for applying an additional linear correction within this range to further enhance accuracy.
       \item Considering the negligible error from the operational amplifier during calibration and the fact that the final error closely matches the sensor calibration against the reference method, it is evident that the replicability of the MCP9700 readings is the primary factor limiting accuracy improvement. 
       Interestingly, the error in the final dynamic system is less than that in the calibration experiment. This may be due to less thermal uniformity in the calibration experiment, 
@@ -272,7 +271,7 @@ same PCB.
 
            User interface. coded as HTML file and Java script, and it has been embedded inside arduino code. Once a device is connected to the same local network of the arduino, it can perform and GET request to the Arduino and the Arduino will send the webpage.
            Once the webpage is served by Arduino, it will start the two state loop described before while the computer will run the webpage locally constantly requesting for data and performing the two described analysis on its own.
-           
+
       % \subsubsection{User Interface}
 
       \subsubsection{Results and conclusion}
