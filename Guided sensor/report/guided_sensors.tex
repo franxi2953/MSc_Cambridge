@@ -218,17 +218,21 @@ thoroughly analyzed.
 
 \section{Pulse meter} % 1000 words
    \subsection{Introduction and goals}
+    - Main scope DIY pulse meter to understand the principle of mechanism
+- Principle of working: two ways: transmittance and reflectance pulsemeter. Both of them red lights, explain briefly the difference. We chose reflectance because its simpler to implement as both sensor and LD are in the 
+same PCB.
+- The steps taken were. our index
    \subsection{Sensor design}
       \subsubsection{Electronic diagram and production}
       The electronic design was constructed following the provided pattern of a circuit with a transimpedance amplifier followed by a voltage amplifier.
       Only the following modifications were included:
-      - A MOSFET U2, to bypass resistor R3 and facilitate the rapid charging of capacitor C2. The goal is to temporarily activate this fast charging to allow the circuit to adapt
-      more quickly to changes in DC offset.
-      - The LEDs and photodiodes were externalized on a separate PCB to allow for better positioning. Through-hole components were replaced with SMD components (as they provide better skin contact),
-      and two photodiodes were placed in series to improve the signal.
+         - A MOSFET U2, to bypass resistor R3 and facilitate the rapid charging of capacitor C2. The goal is to temporarily activate this fast charging to allow the circuit to adapt
+         more quickly to changes in DC offset.
+         - The LEDs and photodiodes were externalized on a separate PCB to allow for better positioning. Through-hole components were replaced with SMD components (as they provide better skin contact),
+         and two photodiodes were placed in series to improve the signal.
 
-Unfortunately, the photolithography system was not available during the week when the PCBs needed to be produced, so all PCBs were hand-drawn with a permanent marker on double-sided copper plates.
-Subsequently, the copper plates were immersed in a copper etchant solution (Ferric Chloride) to remove the copper from the exposed regions. Finally, the mask was removed with acetone, and the plates were immersed in thiourea to coat the copper with a layer of tin.
+      Unfortunately, the photolithography system was not available during the week when the PCBs needed to be produced, so all PCBs were hand-drawn with a permanent marker on double-sided copper plates.
+      Subsequently, the copper plates were immersed in a copper etchant solution (Ferric Chloride) to remove the copper from the exposed regions. Finally, the mask was removed with acetone, and the plates were immersed in thiourea to coat the copper with a layer of tin.
 
       \begin{figure*}[!th]
          % \afterpage{\clearpage}
@@ -237,10 +241,40 @@ Subsequently, the copper plates were immersed in a copper etchant solution (Ferr
          \caption{Annotated electronic diagram (a), etched PCB (b) and PCB after soldering and rework (c).}
          \label{fig:circuit}
       \end{figure*}
-      \subsubsection{Sensing probes}
-      \subsubsection{Case}
-      \subsubsection{Signal analysis}
-      \subsubsection{User Interface}
+      \subsubsection{Mechanical design}
+            - Two components need to be designed and produced. first the part of the device that fix the sensor in position while reducing mechanical noise, the second the case that holds and protects the main electronics, 
+            with battery to power the main system
+            Paragraph1. regarding sensor probe we experimented with two designs. sticky pulse and touchy pulse. Touchy pulse is 3D print envelop that sourrand finger 
+            and holds the sensing PCB pressing against the bottom of the finger: there is a little sponge inside the envelope that keeps the finger pressed to the bottom. 
+            For sticky pulse. it holds the PCB on the surface of a plastic flexible 3D printed piece and it can be sticked in different parts: we tried different positions finding the best results on the jugular of the neck.
+             Results show that sticky pulse can achieve better pulse signal on the neck -> potensially because of the blood flow even though it more sensitive to noise lilke talking or putting down saliva and it is more difficult to find the point of sticking.
+             Touchy pulse even though presents a lower signal is more replicable and it always fit in the same position and less sensitive to mechanical movement. 
+
+            Signal in sticking pulse has more amplitude thats why is better. Figure  
+
+            Regarding the case the Arduino is embedded inside a rectangular case all 3D printed with a spiral in the lateral that holds a 5v external battery that makes the system portable.
+
+      % \subsubsection{Case}
+      \subsubsection{Software}
+          - Embedded system : arduino code is divided in two main loops. Each one of them consists in two different states of arduino protocol; signal measurements and data transmission.
+          During signal measurements the arduino read 1000 values of the transimpedance circuit without any delay. The arduino will reject any request for data during this period.
+          After this the arduino moves to data transmission in which it will wait for clients to request the data. Once the request comes and arduino sends, then arduino goes back to the first state.
+          
+          - Signal analysis. two kind of analysis implemented: first one is based on peak detection and second FFT analysis.
+           - Peak detection: first moving avarage of the signal is computed and used as a threshold to define and detect the peak: Then the time between peaks is computed to calculate beats per minute:
+           Finally there is an error filtering script that removes aberrant peaks - i.e peaks in which the fold change of sequential peaks is bigger than a certain threshold.
+
+           - FFT: first we remove the mobile avarege to substract any rest of the DC offset that the signal may retain, then we compute the FFT signal between 0 and 5 Hz. Then we analyze where is the higher peak in the signal to compute the BPMs.
+           User interface
+
+           Peak detection is validated in python and then tried to be implemented in the JavaScript user interface but we ran out of time to be able to do this analysis on-the-go. 
+           The java script has been coded here but characteriwzation remains to be done.
+
+           User interface. coded as HTML file and Java script, and it has been embedded inside arduino code. Once a device is connected to the same local network of the arduino, it can perform and GET request to the Arduino and the Arduino will send the webpage.
+           Once the webpage is served by Arduino, it will start the two state loop described before while the computer will run the webpage locally constantly requesting for data and performing the two described analysis on its own.
+           
+      % \subsubsection{User Interface}
+
       \subsubsection{Results and conclusion}
       % Mechanical noise is the bigger problem
       % Bluetooth rather than wifi
