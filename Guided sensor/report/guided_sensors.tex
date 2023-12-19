@@ -75,7 +75,7 @@ needed, providing an example of completely DIY technology.
 \section{Temperature Sensor} % 1000 words
    \subsection{Introduction and goals}
    The primary objective of this section of the report is to enhance the 
-accuracy of a basic off-the-shelf temperature sensor, originally too 
+accuracy of a basic off-the-shelf temperature sensor (MCP9700, Microchip Technologies), originally too 
 inaccurate for healthcare applications (±2ºC). This improvement is sought 
 through the incorporation of an analog filtering and voltage amplification 
 circuit, in conjunction with a modular calibration process for various 
@@ -104,6 +104,14 @@ dynamic temperature changes. During this test, the responses of both sensors
 were juxtaposed, and the errors, along with their potential sources, were 
 thoroughly analyzed.
 
+\begin{figure*}[!th]
+   % \afterpage{\clearpage}
+   \centering
+   \includegraphics[width=\textwidth]{images/electronic_diagram.png}
+   \caption{Annotated electronic diagram (a), etched PCB (b) and PCB after soldering and rework (c).}
+   \label{fig:circuit}
+\end{figure*}
+
    \subsection{Sensor design}
       \subsubsection{Electronic diagram}
          The complete circuit diagram is shown in Figure \ref{fig:circuit}. Overall, the designed circuit was divided into 4 parts:
@@ -115,12 +123,11 @@ thoroughly analyzed.
                filter of the DAC should be as low as possible (100 Ohms finally) so that the relationship between its resistance and the
                rest of the rail (especially resistors $R_4 + {R_3} / {R_2}$) is low enough to obtain most of Vin at the output of the
                DAC (otherwise, a significant potential would drop across the DAC resistor). This circuit is connected or disconnected
-               through the mosfet D5.
+               through the mosfet D5 (AO3400).
 
-            \item The amplification circuit is composed of an operational amplifier working as a voltage amplifier, and two interchangeable
-               circuits to select gains of 2.2X or 22X. These circuits are activated with digital pins D2 and D3, and they change the resistances
-               in the loop and in the positive rail. The latter facilitates the use of offset removal, which is subtracted in a 1:1 ratio
-               (the applied offset is the same as subtracted from the sensor's value).
+            \item The amplification circuit is composed of an operational amplifier (MCP9700, Microchip Technologies), working as a voltage amplifier in a range from 0 to 4.7V, and two MOSFET-based
+               gain selection circuits, selecting gains of 2.2X or 22X. These circuits are activated with digital pins D2 and D3, and they change the close loop resistances
+               and and another two mirroring ones on the non-inverting input that allows a 1:1 ratio in the offset removal.
 
             \item The offset removal, controlled through the Arduino's internal DAC on pin A0 with a precision of 12 bits and a range of 0-4.7V
                (when the Arduino is connected via USB), providing a theoretical step of 1mV. The offset is applied to the inverting input and undergoes
@@ -130,16 +137,8 @@ thoroughly analyzed.
                Amplifier, which are responsible for filtering high frequencies from the microcontroller crystals, both in the voltage rail and at
                the output of the operational amplifier.
 
-            \item The sensor connector, where the MCP9001 is plugged into the system.
+            \item The sensor connector, where the sensor is plugged into the system.
          \end{enumerate}
-
-         \begin{figure*}[!th]
-            % \afterpage{\clearpage}
-            \centering
-            \includegraphics[width=\textwidth]{images/electronic_diagram.png}
-            \caption{Annotated electronic diagram (a), etched PCB (b) and PCB after soldering and rework (c).}
-            \label{fig:circuit}
-         \end{figure*}
 
          % \clearpage
 
@@ -159,18 +158,18 @@ thoroughly analyzed.
       Initially, a sweep was performed with the calibration DAC from 0 to a saturation voltage (4.7V), first activating the gain 2 loop circuit and then the gain 22 circuit.
        After confirming that both circuits worked by comparing the obtained gains (and the amplification range) with the expected values, a "sequential offset subtraction" code 
        (using the Arduino's internal DAC) was implemented to subtract a discrete offset each time the operational amplifier was saturated (Appendix A; Figure \ref{fig:opamp}a). The results gradually show that as the 
-       removed offset increases, a minimum in the output voltage is reached, beyond which the signal cannot decrease(Appendix A; Figure \ref{fig:opamp}b). The potential explanation for this voltage lies in the internal
+       removed offset increases, a minimum in the output voltage is reached, beyond which the signal cannot decrease (Appendix A; Figure \ref{fig:opamp}b). The potential explanation for this voltage lies in the internal
         diode of the operational amplifier closed-loop MOSFETs. Even when the MOSFET is open, not conducting voltage through the loop from the output of the operational amplifier 
         to the inverting input, the internal diode of the MOSFET allows circulation from the inverted input of the op-amp to the op-amp's output, contaminating this output with the DAC voltage. 
         When the offset voltage is small, most of it falls on the diode, but as the output grows, it becomes more and more contaminated. Some specialized forums suggest using "back-to-back" MOSFETs\cite{BackBackMOSFET} 
         as a potential solution, but after a quick attempt, the result remained the same. Therefore, due to time constraints, it was decided to desolder the 2X loop and continue the experiment only with a 
         gain of 22, whose results, along with the offset subtraction script, showed an effective input range from 0 to 4.7 volts with an output (including the subtracted offset from the sensor voltage) 
-        of approximately 0-104V(Figure \ref{fig:finalop}).
+        of approximately 0-104V (Figure \ref{fig:finalop}).
 
-        \begin{figure}[h]
+        \begin{figure}[!th]
          \centering
          \includegraphics[width=1\linewidth]{images/finalop.png}
-         \caption{Final plot of DAC voltage vs. the output operational amplifier voltage after adding the offset.}
+         \caption{Output response operational amplifier voltage after adding the offset.}
          \label{fig:finalop}
       \end{figure}
 
@@ -178,9 +177,9 @@ thoroughly analyzed.
 
       For temperature calibration, a previously published open-source isothermal fluorimeter was modified \cite{Open_qLAMPMasterOpen2023}.
       The heated lid was separated from the housing and folded around the two sensors, creating the equivalent of a 'spring roll' with the two sensors 
-      in the center and the lid spiraling around them (Figure \ref{fig:temp}a). The lid was then heated at different intensities, after which it was allowed to reach thermal 
+      in the center and the lid spiraling around them (Figure \ref{fig:temp}a). The lid was then heated at different temperatures, after which it was allowed to reach thermal 
       equilibrium for 3-4 minutes, and the voltage value at the output of the operational amplifier and the temperature of the reference sensor were recorded. 
-      A linear regression was then established, and the error was studied reaching a value of ~±1°C (Figure \ref{fig:temp}b).
+      A linear regression was then established, and confidence intervals were calculated, resulting in a maximun error ~±1°C (Figure \ref{fig:temp}b).
       
       \begin{figure}[h]
          \centering
@@ -205,21 +204,80 @@ thoroughly analyzed.
       From these results, several observations can be made:
       
       \begin{enumerate}
-      \item Both methods demonstrated a correlation with an R-squared value close to 1, a slope of 1, and an intercept almost equal to 0, indicating a strong correlation between them.
+      \item Both methods demonstrated an strong 1:1 correlation with an R-squared value close to 1, a slope of 1, and an intercept almost equal to 0.
       \item The residual distribution, as shown in the Bland-Altman plot, reveals a maximum difference between values of approximately ±1°C (accuracy of ~±1°C). Additionally, within the physiological range (32ºC-40ºC), the maximum error is about ±0.4ºC. This error seems to negatively correlate (decreasing with temperature) up to 40ºC, suggesting the potential for applying an additional linear correction within this range to further enhance accuracy.
-      \item Considering the negligible error from the operational amplifier during calibration and the fact that the final error closely matches the sensor calibration against the reference method, it is evident that the replicability of the temperature sensor's results is the primary factor limiting accuracy improvement. Notably, the error during the calibration phase was broader than that in the testing phase, possibly indicating better temperature uniformity in water (testing phase) compared to air (calibration phase).
+      \item Considering the negligible error from the operational amplifier during calibration and the fact that the final error closely matches the sensor calibration against the reference method, it is evident that the replicability of the MCP9700 readings is the primary factor limiting accuracy improvement. 
+      Interestingly, the error in the final dynamic system is less than that in the calibration experiment. This may be due to less thermal uniformity in the calibration experiment, 
+      where the reference sensor was coiled around the sensor being calibrated, touching the metallic walls of the heater (and thus subject to direct temperature changes) while the 
+      sensor being calibrated, surrounded by a much thicker ceramic layer, took longer to absorb and release immediate changes from the heater.
       \item The results from the adaptive offset circuit are satisfactory, allowing for potentially higher amplification gains than 22 without limiting the range. However, given the accuracy results of the sensor and the source of variability, increased amplification does not appear to be the limiting factor.
-      \item Finally, these results indicate an improvement from the 2ºC accuracy specified in the component's datasheet to 0.4ºC in the physiological range, representing a fivefold improvement.
+      \item Finally, these results indicate an improvement from the ±2ºC accuracy specified in the component's datasheet to ±0.4ºC in the physiological range, representing a fivefold improvement. 
+      
       \end{enumerate}
 
 \section{Pulse meter} % 1000 words
    \subsection{Introduction and goals}
+    - Main scope DIY pulse meter to understand the principle of mechanism
+- Principle of working: two ways: transmittance and reflectance pulsemeter. Both of them red lights, explain briefly the difference. We chose reflectance because its simpler to implement as both sensor and LD are in the 
+same PCB.
+- The steps taken were. our index
    \subsection{Sensor design}
-      \subsubsection{Electronic diagram}
-      \subsubsection{Sensing probes}
-      \subsubsection{Case}
-      \subsubsection{User Interface}
+      \subsubsection{Electronic diagram and production}
+      The electronic design was constructed following the provided pattern of a circuit with a transimpedance amplifier followed by a voltage amplifier.
+      Only the following modifications were included:
+         - The MOSFET U2 (AO3400), to bypass resistor R3 and facilitate the rapid charging of capacitor C2. The goal is to temporarily activate this fast charging to allow the circuit to adapt
+         more quickly to changes in DC offset.
+         - The LEDs and photodiodes were externalized on a separate PCB to allow for better positioning. Through-hole components were replaced with SMD components (as they provide better skin contact),
+         and two photodiodes were placed in series to improve the signal.
+
+      Unfortunately, the photolithography system was not available during the week when the PCBs needed to be produced, so all PCBs were hand-drawn with a permanent marker on double-sided copper plates.
+      Subsequently, the copper plates were immersed in a copper etchant solution (Ferric Chloride) to remove the copper from the exposed regions. Finally, the mask was removed with acetone, and the plates were immersed in thiourea to coat the copper with a layer of tin.
+
+      \begin{figure*}[!th]
+         % \afterpage{\clearpage}
+         \centering
+         \includegraphics[width=\textwidth]{images/ed2.png}
+         \caption{Annotated electronic diagram (a), etched PCB (b) and PCB after soldering and rework (c).}
+         \label{fig:circuit}
+      \end{figure*}
+      \subsubsection{Mechanical design}
+            - Two components need to be designed and produced. first the part of the device that fix the sensor in position while reducing mechanical noise, the second the case that holds and protects the main electronics, 
+            with battery to power the main system
+            Paragraph1. regarding sensor probe we experimented with two designs. sticky pulse and touchy pulse. Touchy pulse is 3D print envelop that sourrand finger 
+            and holds the sensing PCB pressing against the bottom of the finger: there is a little sponge inside the envelope that keeps the finger pressed to the bottom. 
+            For sticky pulse. it holds the PCB on the surface of a plastic flexible 3D printed piece and it can be sticked in different parts: we tried different positions finding the best results on the jugular of the neck.
+             Results show that sticky pulse can achieve better pulse signal on the neck -> potensially because of the blood flow even though it more sensitive to noise lilke talking or putting down saliva and it is more difficult to find the point of sticking.
+             Touchy pulse even though presents a lower signal is more replicable and it always fit in the same position and less sensitive to mechanical movement. 
+
+            Signal in sticking pulse has more amplitude thats why is better. Figure  
+
+            Regarding the case the Arduino is embedded inside a rectangular case all 3D printed with a spiral in the lateral that holds a 5v external battery that makes the system portable.
+
+      % \subsubsection{Case}
+      \subsubsection{Software}
+          - Embedded system : arduino code is divided in two main loops. Each one of them consists in two different states of arduino protocol; signal measurements and data transmission.
+          During signal measurements the arduino read 1000 values of the transimpedance circuit without any delay. The arduino will reject any request for data during this period.
+          After this the arduino moves to data transmission in which it will wait for clients to request the data. Once the request comes and arduino sends, then arduino goes back to the first state.
+          
+          - Signal analysis. two kind of analysis implemented: first one is based on peak detection and second FFT analysis.
+           - Peak detection: first moving avarage of the signal is computed and used as a threshold to define and detect the peak: Then the time between peaks is computed to calculate beats per minute:
+           Finally there is an error filtering script that removes aberrant peaks - i.e peaks in which the fold change of sequential peaks is bigger than a certain threshold.
+
+           - FFT: first we remove the mobile avarege to substract any rest of the DC offset that the signal may retain, then we compute the FFT signal between 0 and 5 Hz. Then we analyze where is the higher peak in the signal to compute the BPMs.
+           User interface
+
+           Peak detection is validated in python and then tried to be implemented in the JavaScript user interface but we ran out of time to be able to do this analysis on-the-go. 
+           The java script has been coded here but characteriwzation remains to be done.
+
+           User interface. coded as HTML file and Java script, and it has been embedded inside arduino code. Once a device is connected to the same local network of the arduino, it can perform and GET request to the Arduino and the Arduino will send the webpage.
+           Once the webpage is served by Arduino, it will start the two state loop described before while the computer will run the webpage locally constantly requesting for data and performing the two described analysis on its own.
+
+      % \subsubsection{User Interface}
+
       \subsubsection{Results and conclusion}
+      % Mechanical noise is the bigger problem
+      % Bluetooth rather than wifi
+      % amplification on the sensing board. long wires catch bigger EM noise
 \section{General Conclusion} % 500 words
 
 
