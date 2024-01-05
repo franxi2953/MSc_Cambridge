@@ -16,45 +16,45 @@ Database file #1: guided_sensor.bib
 Warning--empty journal in dosemagenGatheringOpenScience2017
 
 Done.
-You've used 10 entries,
+You've used 11 entries,
             4087 wiz_defined-function locations,
-            874 strings with 9082 characters,
-and the built_in function-call counts, 4069 in all, are:
-= -- 305
-> -- 61
+            878 strings with 9190 characters,
+and the built_in function-call counts, 4335 in all, are:
+= -- 321
+> -- 62
 < -- 9
-+ -- 32
++ -- 33
 - -- 13
-* -- 168
-:= -- 652
-add.period$ -- 20
-call.type$ -- 10
-change.case$ -- 10
+* -- 174
+:= -- 691
+add.period$ -- 22
+call.type$ -- 11
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 371
-empty$ -- 388
+cite$ -- 12
+duplicate$ -- 399
+empty$ -- 422
 format.name$ -- 16
-if$ -- 921
+if$ -- 983
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 76
-newline$ -- 53
+int.to.str$ -- 11
+missing$ -- 82
+newline$ -- 56
 num.names$ -- 4
-pop$ -- 197
+pop$ -- 216
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 332
+skip$ -- 356
 stack$ -- 0
-substring$ -- 30
-swap$ -- 235
+substring$ -- 31
+swap$ -- 247
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 10
+type$ -- 11
 warning$ -- 1
 while$ -- 7
-width$ -- 12
-write$ -- 98
+width$ -- 13
+write$ -- 104
 (There was 1 warning)

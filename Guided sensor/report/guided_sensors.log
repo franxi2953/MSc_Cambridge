@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.29)  18 DEC 2023 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.10.29)  18 DEC 2023 19:42
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -245,11 +245,7 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count284
 \l__pdf_internal_box=\box59
-) (guided_sensors.aux
-
-LaTeX Warning: Label `fig:circuit' multiply defined.
-
-)
+) (guided_sensors.aux)
 \openout1 = `guided_sensors.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -291,12 +287,12 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 79
  (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3312) has occurred while \output is active []
 
 <images/electronic_diagram.png, id=1, 727.2771pt x 727.2771pt>
 File: images/electronic_diagram.png Graphic file (type png)
 <use images/electronic_diagram.png>
-Package pdftex.def Info: images/electronic_diagram.png  used on input line 110.
+Package pdftex.def Info: images/electronic_diagram.png  used on input line 105.
 (pdftex.def)             Requested size: 516.0pt x 516.01524pt.
  [1{C:/Users/franx/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
@@ -311,12 +307,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/finalop.png, id=16, 722.7pt x 393.3897pt>
 File: images/finalop.png Graphic file (type png)
 <use images/finalop.png>
-Package pdftex.def Info: images/finalop.png  used on input line 171.
+Package pdftex.def Info: images/finalop.png  used on input line 166.
 (pdftex.def)             Requested size: 252.0pt x 137.17223pt.
 <images/temp calibration.png, id=17, 722.7pt x 722.7pt>
 File: images/temp calibration.png Graphic file (type png)
 <use images/temp calibration.png>
-Package pdftex.def Info: images/temp calibration.png  used on input line 186.
+Package pdftex.def Info: images/temp calibration.png  used on input line 181.
 (pdftex.def)             Requested size: 252.0pt x 252.00041pt.
 
 
@@ -325,7 +321,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/final results.png, id=18, 722.7pt x 909.3975pt>
 File: images/final results.png Graphic file (type png)
 <use images/final results.png>
-Package pdftex.def Info: images/final results.png  used on input line 199.
+Package pdftex.def Info: images/final results.png  used on input line 194.
 (pdftex.def)             Requested size: 252.0pt x 317.10054pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -334,58 +330,84 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 1331) has occurred while \output is active []
 
  [4 <./images/temp calibration.png> <./images/final results.png>]
+
+LaTeX Warning: Reference `ed2' on page 5 undefined on input line 224.
+
 <images/ed2.png, id=28, 722.7pt x 515.526pt>
 File: images/ed2.png Graphic file (type png)
 <use images/ed2.png>
-Package pdftex.def Info: images/ed2.png  used on input line 239.
-(pdftex.def)             Requested size: 516.0pt x 368.07913pt.
- (guided_sensors.bbl
+Package pdftex.def Info: images/ed2.png  used on input line 236.
+(pdftex.def)             Requested size: 252.0pt x 179.7603pt.
+<images/mechanical design.png, id=29, 722.7pt x 790.3929pt>
+File: images/mechanical design.png Graphic file (type png)
+<use images/mechanical design.png>
+Package pdftex.def Info: images/mechanical design.png  used on input line 254.
+(pdftex.def)             Requested size: 252.0pt x 275.60446pt.
+<images/mockupweb.png, id=30, 722.7pt x 1019.007pt>
+File: images/mockupweb.png Graphic file (type png)
+<use images/mockupweb.png>
+Package pdftex.def Info: images/mockupweb.png  used on input line 266.
+(pdftex.def)             Requested size: 252.0pt x 355.3206pt.
+
+Underfull \vbox (badness 6220) has occurred while \output is active []
+
+ [5 <./images/ed2.png> <./images/mechanical design.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<images/pulse change.png, id=37, 722.7pt x 581.5326pt>
+File: images/pulse change.png Graphic file (type png)
+<use images/pulse change.png>
+Package pdftex.def Info: images/pulse change.png  used on input line 289.
+(pdftex.def)             Requested size: 252.0pt x 202.77634pt.
+ [6 <./images/mockupweb.png> <./images/pulse change.png>] (guided_sensors.bbl
 Underfull \hbox (badness 3849) in paragraph at lines 39--41
 []\T1/ptm/m/n/8 ``AirFlow mi-crore-ac-tor,'' https://www.hackster.io/jim-haseloff/airflow-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
-[]\T1/ptm/m/n/8 ``Arduino Shield - EasyEDA open source hard-ware lab,''
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
-[]\T1/ptm/m/n/8 ``Back to back MOS-FET's as a switch - Page 2,''
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
-\T1/ptm/m/n/8 https://www.eevblog.com/forum/projects/back-to-back-mosfets-as-a-
- []
-
-
-Underfull \hbox (badness 1810) in paragraph at lines 61--66
+Underfull \hbox (badness 1810) in paragraph at lines 53--58
 []\T1/ptm/m/n/8 ``open_qLAMP $\OMS/cmsy/m/n/8 ^^A$ \T1/ptm/m/n/8 mas-ter $\OMS/cmsy/m/n/8 ^^A$ \T1/ptm/m/n/8 Open Bioe-con-omy Lab / Di-ag-nos-tics
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
+Underfull \hbox (badness 10000) in paragraph at lines 53--58
 \T1/ptm/m/n/8 Hard-ware / Open-Source LAMP hard-ware $\OMS/cmsy/m/n/8 ^^A$ \T1/ptm/m/n/8 Git-Lab,''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--66
+Underfull \hbox (badness 10000) in paragraph at lines 53--58
 \T1/ptm/m/n/8 https://gitlab.com/open-bioeconomy-lab/diagnostics-hardware/rt-lamp-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
+[]\T1/ptm/m/n/8 ``EasyEDA - On-line PCB de-sign & cir-cuit sim-u-la-tor,''
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
+[]\T1/ptm/m/n/8 ``Arduino Shield - EasyEDA open source hard-ware lab,''
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+[]\T1/ptm/m/n/8 ``Back to back MOS-FET's as a switch - Page 2,''
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
+\T1/ptm/m/n/8 https://www.eevblog.com/forum/projects/back-to-back-mosfets-as-a-
  []
 
 )
 runsystem(wordcount.bat guided_sensors.tex)...executed.
 
  (guided_sensors.wc)
-<images/op amp calibration.png, id=29, 722.7pt x 754.7397pt>
+<images/op amp calibration.png, id=43, 722.7pt x 754.7397pt>
 File: images/op amp calibration.png Graphic file (type png)
 <use images/op amp calibration.png>
-Package pdftex.def Info: images/op amp calibration.png  used on input line 295.
-(pdftex.def)             Requested size: 516.0pt x 538.87471pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package pdftex.def Info: images/op amp calibration.png  used on input line 325.
+(pdftex.def)             Requested size: 252.0pt x 263.17244pt.
 
 
 ** Conference Paper **
@@ -398,28 +420,28 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] [6 <./images/ed2.png>] [7 <./images/op amp calibration.png>] (guided_sensors.aux)
+[7 <./images/op amp calibration.png>] (guided_sensors.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3932 strings out of 474717
- 62278 string characters out of 5758250
- 1942036 words of memory out of 5000000
- 25951 multiletter control sequences out of 15000+600000
- 660142 words of font info for 134 fonts, out of 8000000 for 9000
+ 3960 strings out of 474717
+ 62996 string characters out of 5758250
+ 1940036 words of memory out of 5000000
+ 25978 multiletter control sequences out of 15000+600000
+ 661249 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,573b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on guided_sensors.pdf (7 pages, 8949606 bytes).
+ 57i,8n,65p,777b,255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on guided_sensors.pdf (7 pages, 15784001 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -170,9 +170,9 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmrc8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmri8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
 INPUT .\images\finalop.png
@@ -203,6 +203,29 @@ INPUT .\images\ed2.png
 INPUT .\images\ed2.png
 INPUT .\images\ed2.png
 INPUT .\images\ed2.png
+INPUT .\images\mechanical design.png
+INPUT .\images\mechanical design.png
+INPUT .\images\mechanical design.png
+INPUT .\images\mechanical design.png
+INPUT .\images\mechanical design.png
+INPUT .\images\mechanical design.png
+INPUT .\images\mechanical design.png
+INPUT .\images\mockupweb.png
+INPUT .\images\mockupweb.png
+INPUT .\images\mockupweb.png
+INPUT .\images\mockupweb.png
+INPUT .\images\mockupweb.png
+INPUT .\images\mockupweb.png
+INPUT .\images\mockupweb.png
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT .\images\pulse change.png
+INPUT .\images\pulse change.png
+INPUT .\images\pulse change.png
+INPUT .\images\pulse change.png
+INPUT .\images\pulse change.png
+INPUT .\images\pulse change.png
+INPUT .\images\pulse change.png
 INPUT .\guided_sensors.bbl
 INPUT .\guided_sensors.bbl
 INPUT guided_sensors.bbl
@@ -235,6 +258,8 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmb8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmr8a.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\urw\times\utmri8a.pfb
