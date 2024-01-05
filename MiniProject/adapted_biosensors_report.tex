@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+
+% Set the margins
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+
+\newcommand\wordcount{
+   \immediate\write18{wordcount.bat \jobname.tex}
+   \input{\jobname.wc}
+}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \vspace*{60px}
+    \huge{Title of the Project}\\
+    \vspace{10px}
+    \large{Your Name}\\
+    \large{Names of Academic/Company Supervisors}\\
+    \vfill
+    \today
+    \vfill
+\end{titlepage}
+
+% Abstract
+\newpage
+\begin{abstract}
+\noindent
+Your abstract here. (150-250 words)
+\end{abstract}
+
+% Main Body
+\newpage
+\section*{Introduction}
+\subsection*{Papers to read}
+\subsubsection*{Digital Microfluidics}
+
+Paper describing the OpenDrop
+
+moving proteins
+
+the next is bioactivating the surface
+
+but wait... it is covered by a fluoropolimer!
+strategies
+ - can we bind anything to the fluoropolimer?
+  - can we scratch it and bind it to the thing below
+
+
+\subsubsection*{Protein lithography}
+¿Could it also be implemented lipid photolithography?
+How i imagine the process?
+ - First doing lithography of proteins. 
+      - The lithography can help us patterning little island that does not overcrowd the glass, so there's later space for joining enough lipids and making everything hidrophobic.
+ - The covering the rest of the space with lipids
+
+ First I would need to characterize if the lipids (and which lipid) makes the glass hidrophobic enough.
+
+ The above mentioned can not be done! For binding lipids we need silane activation (Or maybe plasma?) which would destroy proteins already present.
+ Maybe we can first bind the lipids (Or maybe actually the fluoropolimer!), then remove them with a laser in precise locations, then do silane activation 
+ (Or whatever it's needed for binding proteins) and then bind the proteins directly to the glass? In this way the protein would be directly in contact with the glass.
+
+
+ Si, parece que la forma más sencilla va a ser:
+ 1) Cubrir los cristales y los chips con el fluoropolimero
+ 2) hacer pequeños agugeros con el laser
+ 3) poner proteina en estos pequeños agugeros
+ 
+ Una alternativa potencial es hacer fotolitografía en el cristal con un polimero positivo para que el fluoropolimero no se deposite?
+ Y despues remover la mascara de alguna forma y que con ella se lleve el teflon que hay encima.... mmm va a ser un problema porque el teflon ya lo esta recubriendo todo...
+
+
+ \subsubsection*{capacitive sensors}
+
+% Figures
+% \begin{figure}[ht]
+% \centering
+% \includegraphics[width=0.5\textwidth]{path/to/your/image.png}
+% \caption{Figure caption (adapted from [source]).}
+% \label{fig:my_label}
+% \end{figure}
+
+\wordcount
+
+% References
+\newpage
+\bibliographystyle{IEEEtran}
+\bibliography{report2_biosensors}
+
+\end{document}
+
+
+\definecolor{myblue}{HTML}{717AFD}
+\definecolor{myred}{HTML}{F0564A}
+\definecolor{mygrey}{HTML}{464546}
+
+\setlength{\parskip}{0.8em} % Adjust space between paragraphs
+

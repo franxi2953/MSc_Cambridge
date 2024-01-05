@@ -49,6 +49,17 @@ M.~Sundhoro, S.~R. Agnihotra, N.~D. Khan, A.~Barnes, J.~BelBruno, and
   detection in complex foods,'' \emph{Scientific Reports}, vol.~11, no.~1, p.
   20831, Oct. 2021.
 
+\bibitem{Open_qLAMPMasterOpen2023}
+``open\_{{qLAMP}} {$\cdot$} master {$\cdot$} {{Open Bioeconomy Lab}} /
+  {{Diagnostics Hardware}} / {{OpenSource LAMP}} hardware {$\cdot$}
+  {{GitLab}},''
+  https://gitlab.com/open-bioeconomy-lab/diagnostics-hardware/rt-lamp-device/-/tree/master/open\_qLAMP,
+  Nov. 2023.
+
+\bibitem{EasyEDAOnlinePCB}
+``{{EasyEDA}} - {{Online PCB}} design \& circuit simulator,''
+  https://easyeda.com/.
+
 \bibitem{ArduinoShieldEasyEDA}
 ``Arduino {{Shield}} - {{EasyEDA}} open source hardware lab,''
   https://oshwlab.com/MakotoNinja/arduino-shield.
@@ -56,12 +67,5 @@ M.~Sundhoro, S.~R. Agnihotra, N.~D. Khan, A.~Barnes, J.~BelBruno, and
 \bibitem{BackBackMOSFET}
 ``Back to back {{MOSFET}}'s as a switch - {{Page}} 2,''
   https://www.eevblog.com/forum/projects/back-to-back-mosfets-as-a-switch/25/.
-
-\bibitem{Open_qLAMPMasterOpen2023}
-``open\_{{qLAMP}} {$\cdot$} master {$\cdot$} {{Open Bioeconomy Lab}} /
-  {{Diagnostics Hardware}} / {{OpenSource LAMP}} hardware {$\cdot$}
-  {{GitLab}},''
-  https://gitlab.com/open-bioeconomy-lab/diagnostics-hardware/rt-lamp-device/-/tree/master/open\_qLAMP,
-  Nov. 2023.
 
 \end{thebibliography}

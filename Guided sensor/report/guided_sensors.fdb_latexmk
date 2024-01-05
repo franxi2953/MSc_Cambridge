@@ -1,15 +1,16 @@
 # Fdb version 4
-["bibtex guided_sensors"] 1702914340 "guided_sensors.aux" "guided_sensors.bbl" "guided_sensors" 1702914517 0
-  "./guided_sensor.bib" 1702905491 8376 e47a4ccf8665910e449a5a1d73a92255 ""
+["bibtex guided_sensors"] 1702927754 "guided_sensors.aux" "guided_sensors.bbl" "guided_sensors" 1702928557 0
+  "./guided_sensor.bib" 1702927085 8539 62e1ece87c24a61c7a8bb19048194f74 ""
   "C:/Program Files/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "guided_sensors.aux" 1702914516 4823 dc5c4c4e23e4733211322cdde6e353d4 "pdflatex"
+  "guided_sensors.aux" 1702928557 6084 9e81cd1f05324a0accc0ac22d758178b "pdflatex"
   (generated)
   "guided_sensors.bbl"
   "guided_sensors.blg"
   (rewritten before read)
-["pdflatex"] 1702914512 "c:/Users/franx/Documents/Github/MSc_Cambridge/Guided sensor/report/guided_sensors.tex" "guided_sensors.pdf" "guided_sensors" 1702914517 0
+["pdflatex"] 1702928550 "c:/Users/franx/Documents/Github/MSc_Cambridge/Guided sensor/report/guided_sensors.tex" "guided_sensors.pdf" "guided_sensors" 1702928557 0
   "C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb7t.tfm" 1136772254 2172 fd0c924230362ff848a33632ed45dc23 ""
+  "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb8r.tfm" 1136772254 4524 6bce29db5bc272ba5f332261583fee9c ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmb8t.tfm" 1136772254 6880 f19b8995b61c334d78fc734065f6b4d4 ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmbi7t.tfm" 1136772254 2228 e564491c42a4540b5ebb710a75ff306c ""
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/times/ptmbi8t.tfm" 1136772254 6784 37b32cc10800b5afa030d935c393695a ""
@@ -33,8 +34,10 @@
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
+  "C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136853348 44729 fea0975e20ec51c992338362f05f1146 ""
   "C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136853348 46026 687528a208fbfc1f00832bb96cccebbb ""
   "C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb" 1136853348 45458 504e2b06fa82109d168c7a0afb09e145 ""
+  "C:/Program Files/MiKTeX/fonts/vf/adobe/times/ptmb8t.vf" 1136772254 2340 df9c920cc5688ebbf16a93f45ce7bdd3 ""
   "C:/Program Files/MiKTeX/fonts/vf/adobe/times/ptmr8c.vf" 1136772254 3556 8a9a6dcbcd146ef985683f677f4758a6 ""
   "C:/Program Files/MiKTeX/fonts/vf/adobe/times/ptmr8t.vf" 1136772254 2348 91706c542228501c410c266421fbe30c ""
   "C:/Program Files/MiKTeX/fonts/vf/adobe/times/ptmrc8t.vf" 1136772254 3608 eb048a634708cbf5eda8def0ce93c7bb ""
@@ -68,16 +71,19 @@
   "C:/Program Files/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/franx/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1698512429 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/franx/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1698598862 24193943 666645f04cbad3f22e45b307fe393ed9 ""
-  "c:/Users/franx/Documents/Github/MSc_Cambridge/Guided sensor/report/guided_sensors.tex" 1702914506 22731 1976787d4ba45e386ade4200a6bce296 ""
-  "guided_sensors.aux" 1702914516 4823 dc5c4c4e23e4733211322cdde6e353d4 "pdflatex"
-  "guided_sensors.bbl" 1702914340 2674 86d7ae23529c45a9d782adbb7e1708ea "bibtex guided_sensors"
-  "guided_sensors.tex" 1702914506 22731 1976787d4ba45e386ade4200a6bce296 ""
-  "guided_sensors.wc" 1702914515 19 7807b193d2eb30274dbcdd6f6fcd308f ""
+  "c:/Users/franx/Documents/Github/MSc_Cambridge/Guided sensor/report/guided_sensors.tex" 1702928550 25844 00951971447cc13a9bde3b2efaf1d796 ""
+  "guided_sensors.aux" 1702928557 6084 9e81cd1f05324a0accc0ac22d758178b "pdflatex"
+  "guided_sensors.bbl" 1702927754 2792 010b79adf37eb4be8d40ff5152545211 "bibtex guided_sensors"
+  "guided_sensors.tex" 1702928550 25844 00951971447cc13a9bde3b2efaf1d796 ""
+  "guided_sensors.wc" 1702928556 19 fc935c66aabab367b425ee0b5dc7b0dc ""
   "images/ed2.png" 1702906329 1611619 c67c01c791b969ae5bd5a8be5aae142e ""
   "images/electronic_diagram.png" 1702866731 2343424 4d819cfd3183cf04f9af875e87c11a70 ""
   "images/final results.png" 1702914116 940504 7ad6110d7ed863826cb439a1ec788192 ""
   "images/finalop.png" 1702913838 362827 557f94c69e440dedbbcf7fd7a451b5b5 ""
+  "images/mechanical design.png" 1702911987 3140572 e20b30251dfe8f30d78c70fe6ae947d4 ""
+  "images/mockupweb.png" 1702913324 1456267 2398848aaece271ce1726be72141eb10 ""
   "images/op amp calibration.png" 1702875514 1179436 9d4aa9720c091a00c734fa1d75400b0e ""
+  "images/pulse change.png" 1702917814 1864359 268929ca040cafff1fcdd305383e5da9 ""
   "images/temp calibration.png" 1702914237 1881791 e6662d51bc0df86f9a585cdb4013c016 ""
   "wordcount.bat" 1698615391 170 b3027474dbb7b2d52435cc65cfd6f432 ""
   (generated)

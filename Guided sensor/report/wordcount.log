@@ -1,24 +1,25 @@
 File: guided_sensors.tex
 Encoding: utf8
-Words in text: 2660
-Words in headers: 48
-Words outside text (captions, etc.): 97
-Number of headers: 21
-Number of floats/tables/figures: 6
+Words in text: 2951
+Words in headers: 54
+Words outside text (captions, etc.): 189
+Number of headers: 22
+Number of floats/tables/figures: 9
 Number of math inlines: 1
 Number of math displayed: 0
 Subcounts:
   text+headers+captions (#headers/#floats/#inlines/#displayed)
   0+3+0 (1/0/0/0) _top_
-  358+2+0 (1/0/0/0) Section: General Introduction
+  0+2+0 (1/0/0/0) Section: General Introduction
+  345+6+0 (1/0/0/0) Subsection: Open source hardware against knowledge barriers
   0+2+0 (1/0/0/0) Section: Temperature Sensor
-  257+3+14 (1/1/0/0) Subsection: Introduction and goals
-  473+8+0 (4/0/1/0) Subsection: Sensor design
-  416+7+16 (3/2/0/0) Subsection: Sensor Calibration
+  236+3+14 (1/1/0/0) Subsection: Introduction and goals
+  475+8+0 (4/0/1/0) Subsection: Sensor design
+  417+7+16 (3/2/0/0) Subsection: Sensor Calibration
   342+3+13 (1/1/0/0) Subsection: Results and discussion
   0+2+0 (1/0/0/0) Section: Pulse meter
-  53+3+0 (1/0/0/0) Subsection: Introduction and goals
-  761+12+14 (5/1/0/0) Subsection: Sensor design
-  0+2+0 (1/0/0/0) Section: General Conclusion
-  0+1+40 (1/1/0/0) Section: Compliance
+  147+3+0 (1/0/0/0) Subsection: Introduction and goals
+  978+11+106 (5/4/0/0) Subsection: Sensor design
+  11+1+0 (1/0/0/0) Section: Compliance
+  0+3+40 (1/1/0/0) Section: Operational amplifier calibration
 
