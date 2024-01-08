@@ -37,8 +37,34 @@ Your abstract here. (150-250 words)
 % Main Body
 \newpage
 \section*{Introduction}
-\subsection*{Papers to read}
-\subsubsection*{Digital Microfluidics}
+
+La microfluidica digital (DMF) es la tecnología que, con el objetivo de automatizar procesos de laboratorio, utiliza
+diferentes tecnologías para poder realizar una interfaz entre software digital programable y la automatización del 
+movimiento de cantidades de fluido del orden de magnitud de los microfluidos o menores. Durante este proyecto trabajaremos
+en particular con una vertiente de esta, electrowetting-on-dielectric, que hace uso del posicionamiento de cargas electricas bajo una fina de aislante, altamente hidrofobico, para disminuir localmente las fuerzas de repulsion entre este y microgotas de un fluido polar, facilitando
+el movimiento de estas de forma controlada (cita). Al margen de numerosos avances en el campo simplificando (y abaratando) el hardware necesario (cita opendrop) o miniaturizando y escalando el numero de electrodos (cita). Aunque es un campo que esta transformandose rápidamente,
+parcialmente por la fuerte inversión en I+D tnato pública como de grandes empresas en el sector (cita VOLTRAX) ha día de hoy el gran problema 
+de EWOD es la falta de integración de sensorica en los chips, sobre todo quimio y biosensores. La mayoría de la sensorica más relevante depende
+de caros y bulky aparatos de microscopía optica (ejemplos, quizás lamp?).
+
+Durante este miniproyecto se repourposing una metodología ya desarrollada de paternización de proteinas en superficies para bioactivar los cristales que recubren las microgotas. El principal objetivo es desarrollar un protocolo straightforward que permita, de una manera sencilla unir biomoleculas a la superficie que esta en contacto con los fluidos para generar una interacción especifica entre la superficie del dispositivo de electrowetting y las moleculas del fluido, mediada por las proteinas paternizadas en la superficie del cristal del recubrimiento. Para entender la magnitud de la señal, se intentará usar el dispositivo de feedback de la plataforma usada, OpenDrop la plataforma open source más estendida de microfluidica digital, esperando ver cambios dependientes de la interacción entre las proteinas unidas a la plataforma y las contenidas en el líquido.
+
+La utilidad práctica de una plataforma capaz de intereaccionar de forma biológica con los fluidos que mobiliza es clara; Bien como actuador, quelando proteinas, celulas u otros compuestos de forma específica, secuestrandolos de la solución, o como sensor, siendo capaz de medir en tiempo real factores como cantidad de celulas, enzymas o moleculas energéticas en fluidos que contengan o bien celulas o incluso cell-free mixes. De esta forma la microfluidica digital se convertirá no solo en una pataforma de automatizado del movimiento de fluidos sino en una plataforma completa que permitira medir y actuar sobre la capa bioquimica de estas reacciones.
+
+
+\subsection*{The paltform: OpenDrop v4}
+- Tradicionalmente la microfluidica digital a estado sujeta bien a sistemas DIY creados de forma casera en laboratorios, o bien sistemas altamente caros diseñados para un trabajo experimental altamente especifico de laboratorios highly funded / equipped. 
+- OpenDrop viene a solucionar este problema, usando metodos de fabricación estandar de PCB y hardware open source, opendrop se presenta como una plataforma sencilla y barata de replicar y adaptar con unos niveles de precisión comparables a otras plataformas descritas en la literatura.
+- Además opendrop es un sistema modular basado en "Cartridges". El investigador que la use no tiene que diseñar todo el dispositivo, si no solo el cartridge, que incluye el patron de los electrodos y toda la sensorica en torno a ellos, que se conecta a la main board a traves de conectores estandares que permiten drive el sistema. Esta modularidad es clave porque nos permite eventualmente diseñar nuestros propios cartridges sin tener que reinventar el sistema de control principal.
+
+\subsection*{Patterning proteins}
+El principal problema; el ITO glass, el substrato donde se unirían las proteinas, debe de estar (al menos mayoritariamente) cubierto de una capa hidrofóbica, para evitar permitir que la gota se nueva gracias a las interacciones hidrofobicas (O temporalmente hidrofilicas) entre el fluido y la capa de fluoropolimero. Por otro lado, si las proteinas se unen al cristal, estas han de exponerse al fluido, por lo tanto la capa hidrofobica tiene que ser removida localmente para permitir exponer estas proteinas, pero de una forma suficientemente sutil para que la interaccion gota-cristal no apantalle la potencial repulsion de la capa hidrofobica una vez el electrodo se apague.
+
+\subsubsection*{Exposing the ITO glass over the hydrophobic cover layer}
+Dos métodos potenciales; (1) Cubrir todo el cristal y desgastar las zonas que queremos con un laser (cita) o (2) usar un fluoropolimero que
+polimerice con UV, exponiendo solo parte del cristal al proceso de solidificación.
+\subsubsection*{Proteing binging and quality control}
+\subsection*{Signal generation}
 
 Paper describing the OpenDrop
 
