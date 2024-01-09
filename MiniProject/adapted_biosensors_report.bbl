@@ -21,14 +21,38 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{strale_multiprotein_2016}
-\BIBentryALTinterwordspacing
+\bibitem{beniContinuousElectrowettingEffect1982}
+G.~Beni, S.~Hackwood, and J.~L. Jackel, ``Continuous electrowetting effect,''
+  \emph{Applied Physics Letters}, vol.~40, no.~10, pp. 912--914, May 1982.
+
+\bibitem{VolTRAX2018}
+``{{VolTRAX}},'' https://nanoporetech.com/resource-centre/voltrax-0, Dec. 2018.
+
+\bibitem{OxfordNanoporeAnnounces}
+``Oxford {{Nanopore}} announces {\textsterling}100 million (\${{140M}})
+  fundraising from global investors,''
+  https://nanoporetech.com/about-us/news/oxford-nanopore-announces-ps100-million-140m-fundraising-global-investors.
+
+\bibitem{zhang2DLargescaleEWOD2020}
+K.~Zhang, W.~Wang, C.~Li, A.~Riaud, and J.~Zhou, ``{{2D}} large-scale {{EWOD}}
+  devices with honeycomb electrodes for multiplexed multidirectional driving of
+  micro-droplets,'' \emph{AIP Advances}, vol.~10, no.~5, p. 055227, May 2020.
+
+\bibitem{qinSolutionMassProduction2021}
+F.~Qin, K.~Zhang, B.~Lin, P.~Su, Z.~Jia, K.~Xi, J.~Ye, and S.~Gu, ``Solution
+  for {{Mass Production}} of {{High-Throughput Digital Microfluidic Chip
+  Based}} on a-{{Si TFT}} with {{In-Pixel Boost Circuit}},''
+  \emph{Micromachines}, vol.~12, no.~10, p. 1199, Oct. 2021.
+
+\bibitem{straleMultiproteinPrintingLightInduced2016}
 P.-O. Strale, A.~Azioune, G.~Bugnicourt, Y.~Lecomte, M.~Chahid, and V.~Studer,
-  ``Multiprotein {Printing} by {Light}-{Induced} {Molecular} {Adsorption},''
-  \emph{Advanced Materials}, vol.~28, no.~10, pp. 2024--2029, 2016, \_eprint:
-  https://onlinelibrary.wiley.com/doi/pdf/10.1002/adma.201504154. [Online].
-  Available:
-  \url{https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.201504154}
-\BIBentrySTDinterwordspacing
+  ``Multiprotein {{Printing}} by {{Light-Induced Molecular Adsorption}},''
+  \emph{Advanced Materials}, vol.~28, no.~10, pp. 2024--2029, 2016.
+
+\bibitem{wangUltraSensitiveCapacitiveMicrowire2019}
+L.~Wang, J.~E. Filer, M.~M. Lorenz, C.~S. Henry, D.~S. Dandy, and B.~J. Geiss,
+  ``An {{Ultra-Sensitive Capacitive Microwire Sensor}} for {{Pathogen-Specific
+  Serum Antibody Responses}},'' \emph{Biosensors \& bioelectronics}, vol. 131,
+  pp. 46--52, Apr. 2019.
 
 \end{thebibliography}
