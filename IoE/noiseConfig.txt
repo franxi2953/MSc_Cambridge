@@ -1,0 +1,118 @@
+# all units in um, sec
+
+
+graphics opengl
+graphic_iter 1
+
+
+#--------GRAPH---------
+
+dim 3
+boundaries x -50 250 r
+boundaries y -50 50 r
+boundaries z -50 50 r
+
+
+#--------TIME----------
+
+time_start 0
+time_stop simDuration
+time_step simTimeStep
+
+#-------SPECIES--------
+
+species L I R RI RL
+difc L diffLigand
+difc I diffLigand
+difc R 0
+difc RI 0
+difc RL 0
+color L(all) red
+color I(all) green
+color R(all) blue
+color RL(all) yellow
+color RI(all) black
+display_size all(all) 1
+
+
+reaction bindL L(fsoln) + R(up) -> RL(up) kBindLigand
+reaction unbindL RL(up) -> L(fsoln) + R(up) kUnbindLigand
+reaction bindI I(fsoln) + R(up) -> RI(up) kBindLigand
+reaction unbindI RI(up) -> I(fsoln) + R(up) 10
+
+#------SURFACE---------
+
+start_surface microfluidic
+action both all(all) reflect
+panel rect +x 0 0 0 h_ch w_ch
+panel rect -y 0 0 0 l_ch w_ch
+panel rect +y 0 h_ch 0 l_ch w_ch
+panel rect -z 0 0 0 l_ch h_ch
+panel rect +z 0 0 w_ch l_ch h_ch
+polygon both edge
+end_surface
+
+start_surface outlet
+action both I(all) reflect
+action both L(all) reflect
+action both R reflect
+panel rect -x l_ch 0 0 h_ch w_ch
+polygon both edge
+end_surface
+
+
+start_surface receiver
+action both all(all) reflect
+panel rect +y x_rx 0 0 l_rx w_rx
+polygon both edge
+end_surface
+
+
+start_surface outsides
+unbounded_emitter front L 1 5 5 5
+panel rect +x -50 -50 -50 100 100
+panel rect -x 250 -50 -50 100 100
+panel rect +y -50 -50 -50 300 100
+panel rect -y -50 50 -50 300 100
+panel rect +z -50 -50 -50 300 100 
+panel rect -z -50 -50 50 300 100
+polygon both edge
+end_surface
+
+start_compartment channel
+  point x_comp y_comp z_comp
+  surface microfluidic
+  surface outlet
+end_compartment
+
+
+#-------MOLECULES----------
+
+# initial molecules
+surface_mol numReceptor R(up) receiver all all
+compartment_mol 1000 I channel 
+compartment_mol numLigand L channel 
+
+
+output_files FILEROOTout_symbol_id_index_reactionlog.txt
+output_files FILEROOTout_symbol_id_index_moleculecount.txt
+cmd b overwrite FILEROOTout_symbol_id_index_reactionlog.txt
+cmd b overwrite FILEROOTout_symbol_id_index_moleculecount.txt
+cmd e molcount FILEROOTout_symbol_id_index_moleculecount.txt
+
+
+reaction_serialnum bindL r2  
+reaction_serialnum bindI r2
+reaction_serialnum unbindL new + r1
+reaction_serialnum unbindI new + r1
+
+product_placement unbindL pgemmax 0.2
+product_placement unbindI pgemmax 0.2
+
+reaction_log FILEROOTout_symbol_id_index_reactionlog.txt all all
+
+
+text_display time L I R(all) RI(all) RL(all)
+
+end_file
+
