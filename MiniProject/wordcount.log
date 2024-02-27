@@ -1,17 +1,18 @@
 File: adapted_biosensors_report.tex
-Encoding: utf8
-Words in text: 1004
-Words in headers: 28
-Words outside text (captions, etc.): 0
+Encoding: ascii
+Words in text: 1583
+Words in headers: 30
+Words outside text (captions, etc.): 99
 Number of headers: 9
-Number of floats/tables/figures: 0
+Number of floats/tables/figures: 3
 Number of math inlines: 0
 Number of math displayed: 0
 Subcounts:
   text+headers+captions (#headers/#floats/#inlines/#displayed)
-  5+1+0 (1/0/0/0) _top_
-  398+1+0 (1/0/0/0) Section: Introduction
-  172+4+0 (1/0/0/0) Subsection: The paltform: OpenDrop v4
-  157+16+0 (3/0/0/0) Subsection: Patterning proteins
-  272+6+0 (3/0/0/0) Subsection: Signal generation
+  169+1+0 (1/0/0/0) _top_
+  394+1+35 (1/1/0/0) Section: Introduction
+  174+4+46 (1/1/0/0) Subsection: The Platform: OpenDrop v4
+  726+21+18 (4/1/0/0) Subsection: Patterning Proteins
+  120+2+0 (1/0/0/0) Subsection: Goal Summary
+  0+1+0 (1/0/0/0) Section: Compliance
 
