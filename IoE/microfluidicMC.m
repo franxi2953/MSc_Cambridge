@@ -95,6 +95,7 @@ end
 
 parfor i = 1:numSymbol
 command = sprintf('smoldyn config.txt -wt --define simDuration=%d --define simTimeStep=%d --define numLigand=%d --define numReceptor=%d --define diffLigand=%d --define kBindLigand=%d  --define kUnbindLigand=%d --define w_ch=%d --define h_ch=%d --define l_ch=%d --define l_rx=%d --define w_rx=%d --define x_rx=%d --define x_comp=%d --define y_comp=%d --define z_comp=%d --define index=%d',simDuration, simTimeStep, numLigand_array(i),  numReceptor, diffLigand, kBindLigand, kUnbindLigand, w_ch, h_ch, l_ch, l_rx, w_rx, x_rx, x_comp, y_comp, z_comp, i);
+fprintf(command);
 system(command); 
 end
 %%
@@ -118,7 +119,7 @@ time = molcount(:,1);
 
 
 end
-%figure; semilogx(time,sample_boundreceptors); xlabel('time(s)'); ylabel('N_B');
+figure; semilogx(time,sample_boundreceptors); xlabel('time(s)'); ylabel('N_B');
 
 %%%%%DETECTION THRESHOLD %%%%%%%%%%%%%%%%%
 % delta_I_mean = zeros(2,1);
