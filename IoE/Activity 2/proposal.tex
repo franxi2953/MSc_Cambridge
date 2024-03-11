@@ -1,0 +1,83 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+    
+
+\begin{document}
+
+\title{Digital Microfluidics-Driven Cell-Free Systems: A Platform for Facilitating Data Transfer Between Biological and Electronic Systems}
+
+\author{\IEEEauthorblockN{Blind grading number 2504F }
+\IEEEauthorblockA{\textit{Department of Chemical Engineering and Biotechnology} \\
+\textit{University of Cambridge}}
+}
+
+\maketitle
+
+\begin{abstract}
+    This proposal presents a platform designed to facilitate direct information transfer between biological systems and digital software, utilizing advanced Electrowetting-On-Dielectric (EWOD) digital microfluidics coupled with cell-free systems. It explores the manipulation and real-time analysis of microscale droplets to emulate biological processes, with data integration and learning driven by neural networks. This synergy aims to create a seamless interface between biology and digital technology, enhancing our capacity to interpret and manipulate biological information at a scale within the realm of the Internet of Artificial Cells.
+    \end{abstract}
+    
+    \begin{IEEEkeywords}
+    bio-electronics, Internet of Everything, digital microfluidics, cell-free systems
+    \end{IEEEkeywords}
+
+\section{The tyranny of the (bio)numbers}
+
+Biological systems, finely tuned over millions of years, represent an almost limitless reservoir of sophisticated solutions to complex problems—from sensory mechanisms and information storage to interaction with the real world through nanometric actuators. Echoing Richard Feynman's, \textit{'There's plenty of room at the bottom'}, and we find that biology could be our inspiration at the nanoscale. 
+
+However, while biology excels at measuring, computing, and acting on vast amounts of information with precision, our understanding of these complex systems remains elusive. Their inherent complexity, chaotic behavior, and structural instability pose significant challenges. Traditional trial-and-error experimentation methods, based on mechanical pipetting of microliter volumes, have been slow, error-prone, and lack the agility needed to decipher these systems' vast informational and operational capacities. We need new methodologies that can match the speed, accuracy, and scale of biological processes.
+
+Similar to electronic engineering's 'tyranny of numbers,' we face a parallel challenge in biology. Our current methodologies, akin to pre-integrated circuit computing efforts, struggle to scale our understanding of biological systems. Just as electronics found new paradigms, biology too demands innovative approaches to surpass these traditional limitations.
+
+\section{Rethinking Our Approach to Biological Information Systems}
+
+Biological systems operate on a scale and complexity that challenge our processing capabilities. Yet, the advancements in digital electronics and software have significantly enhanced our ability to handle and understand vast quantities of data, including from chaotic systems previously beyond our grasp. Bridging the gap between digital electronics and biology could transform how we interact with biological processes: digital systems could manage the data collection and abstraction from biological entities, while we use software to analyze and control outcomes.
+
+The first steps towards integrating biology with digital technology involved automating experiments with robotic pipetting. Yet, this method encounters significant hurdles, including imprecision, a mismatch in operational volumes compared to biological systems, and scalability challenges. These issues prompt us to consider if we can ever process biological information as efficiently as silicon chips manage digital data, suggesting a push towards more advanced integration techniques. Classical microfluidics, while pioneering, faces limitations due to its rigid design. Traditional chips are constructed with a static structure, lacking the capacity to dynamically interpret results and adjust protocols in real-time, as they're built to operate on a predetermined algorithm mechanically etched into the chip's circuitry.
+
+\section{Bridging Biology and Software through Digital Microfluidics and Cell-Free Systems}
+
+This project aims to bridge biological and digital systems on a grand scale, utilizing Electrowetting-On-Dielectric (EWOD) digital microfluidics. This technology controls tiny liquid droplets by applying voltages beneath them, with droplet size corresponding to electrode size. By miniaturizing these electrodes using thin-film transistor (TFT) technology—akin to that used in smartphone screens—the droplets can be reduced to nearly cellular dimensions.
+
+To further advance this technology, the project incorporates cell-free lysates: mixtures containing cellular components, excluding genetic materials and membranes. For instance, a cell-free solution derived from Escherichia coli would retain the bacterium's functionality without its cellular structure. When dispersed into droplets within the digital microfluidics chips, these cell-sized droplets act as artificial bacteria, merging biological processes with digital precision in a novel, scalable platform.
+
+The droplets flow over a surface covered with an Indium Tin Oxide (ITO) crystal, which is patterned with different proteins across various regions. This design enables targeted biological interactions with the droplets by guiding them across distinct protein areas. The proteins' direct integration with the ITO crystal facilitates the monitoring of the system by observing capacitance changes. These changes are indicators of the biochemical reactions occurring within the droplets, allowing for real-time analysis of their biological activity.
+
+This platform facilitates the precise control of thousands of cell-free droplets to model and monitor biological processes in real-time. By manipulating single variables—either through directing their interaction with the bioactivated ITO glass or by altering their chemical composition through merging droplets—it simulates a vast array of biological experiments simultaneously. The collected data is then processed by a neural network, which evaluates the biological outcomes, derives insights, and recommends further experiments.
+
+As the platform executes these cycles of experimentation and learning, the neural network becomes increasingly skilled at decoding biological information, essentially evolving into an advanced model of biological computation. This model can then be queried using long language models for accessible, refined insights into the biological data.
+
+Ultimately, the platform creates a closed loop between biological experimentation and digital analysis, with electronics translating biological data for software processing, and software facilitating our interaction with this complex information.
+
+\section{The Internet of Artificial Cells}
+This platform interconnects electronics and software with thousands of small artificial cells in parallel, enabling the writing and reading of their biochemistry. It also serves as an ideal platform for reading the outcomes of specific cellular processes in some cells and writing information in others.
+
+Thus, the platform serves not only as a transmitter of digital information and a receiver of biological information but also as a digital channel for transmitting biological information from one artificial cell to another, enabling them to interact and respond to changes in neighboring cells.
+
+\begin{thebibliography}{1}
+
+    \bibitem{alistarOpenDropIntegratedDoItYourself2017}
+    M.~Alistar and U.~Gaudenz, ``OpenDrop: An Integrated Do-It-Yourself Platform for Personal Use of Biochips,'' \emph{Bioengineering}, vol.~4, no.~2, p. 45, May 2017. DOI: 10.3390/bioengineering4020045.
+    
+    \bibitem{laohakunakornCellFreeSystemsProving2020}
+    N.~Laohakunakorn, ``Cell-Free Systems: A Proving Ground for Rational Biodesign,'' \emph{Frontiers in Bioengineering and Biotechnology}, vol.~8, Jul. 2020. DOI: 10.3389/fbioe.2020.00788.
+    
+    \bibitem{yangConqueringTyrannyNumber2021}
+    Y.-T. Yang and T.-Y. Ho, ``Conquering the Tyranny of Number With Digital Microfluidics,'' \emph{Frontiers in Chemistry}, vol.~9, May 2021. DOI: 10.3389/fchem.2021.676365.
+    
+    \end{thebibliography}
+    
+
+\end{document}
